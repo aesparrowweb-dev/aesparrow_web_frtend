@@ -1,0 +1,13 @@
+<div class="component-wrapper">
+    <app-sub-banner *ngIf="subServiceData && filterdService" [subBanner]="subServiceData"
+        [mainData]="mainServiceData"></app-sub-banner>
+    <app-sub-desc *ngIf="subServiceData" [subDesc]="subServiceData"></app-sub-desc>
+    <app-includes *ngIf="subServiceData" [subIncludes]="subServiceData"></app-includes>
+    <app-benifits *ngIf="subServiceData" [subBenifits]="subServiceData"></app-benifits>
+    <app-security-lists *ngIf="subServiceData" [subSecurityLists]="subServiceData"></app-security-lists>
+    <app-cyber-policy *ngIf="subServiceData" [subCyberPolicy]="subServiceData"></app-cyber-policy>
+    <app-test *ngIf="subServiceData" [subTest]="subServiceData"></app-test>
+    <app-tools *ngIf="subServiceData" [subTools]="subServiceData"></app-tools>
+    <app-methadology *ngIf="subServiceData" [subMethadology]="subServiceData"></app-methadology>
+    <app-other-services *ngIf="filterdService && mainServiceId && newSubServiceId" [mainId]="mainServiceId" [subMainServiceData]="filterdService" [subId]="newSubServiceId"></app-other-services>
+</div>

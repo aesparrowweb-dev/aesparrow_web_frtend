@@ -1,0 +1,174 @@
+h2 {
+  font-size: 36px;
+  font-weight: 900;
+  color: #FFFFFF
+}
+
+.main-container {
+  background-color: #000000;
+}
+
+
+span {
+  color: var(--erm-secondary-color-shade3);
+}
+
+
+.form-content {
+  border: 1.5px solid #404574;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-top: 5px;
+}
+
+label {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+input {
+  background: transparent;
+  border: none !important;
+  outline: none;
+  width: 100%;
+}
+
+.country-code {
+  background-color: #FFFFFF;
+}
+
+.phone-gg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+  margin-top: 0rem;
+
+  .country-select {
+    flex: 0 0 20%;
+    min-width: 100px;
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+  }
+
+  .phone-input {
+    flex: 1 1 78%;
+    min-width: 200px;
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0px 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .country-select,
+    .phone-input {
+      flex: 1 1 100%;
+    }
+  }
+}
+
+
+
+textarea {
+  background: transparent;
+  border: none !important;
+  width: 100%;
+  outline: none;
+}
+
+select {
+  background: transparent;
+  width: 100%;
+  border: none !important;
+  resize: none;
+  outline: none;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.form-error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+@media (max-width: 767px) {
+  .sendButton {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+.buttonsd {
+  background: transparent;
+  color: #FFFFFF;
+  padding: 8px 20px;
+  border: 2px solid #004AAD;
+  background-color: #004AAD;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease-in-out;
+}
+
+.buttonsd::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #004AAD;
+  top: 100%;
+  left: 0;
+  transition: top 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.buttonsd:hover::before {
+  top: 0;
+}
+
+.buttonsd:hover {
+  color: white;
+  background-color: transparent;
+}

@@ -1,0 +1,48 @@
+
+h2 {
+  font-size: 36px;
+  font-weight: 900;
+  color: #FFFFFF
+}
+
+h5 {
+  font-weight: 900;
+  color: #FFFFFF;
+  margin-bottom: 0 !important;
+}
+
+.main-container {
+  background-color: #0b1e36 !important;
+}
+
+.hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.boxes{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.boxes:hover {
+  background-color: #FFFFFF;
+
+  h5 {
+    color: #0b1e36 !important;
+  }
+
+
+}
+
+.text-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}

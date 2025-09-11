@@ -1,0 +1,16 @@
+<div class="main-container py-5" #statSection>
+    <h2 class="text-center" data-aos="fade-down" data-aos-duration="1500" data-aos-easing="ease-in-sine">Our <span>Achievements</span></h2>
+    <div class="container" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-sine">
+        <div class="container pt-5">
+            <div class="row text-center">
+                <div class="col-12 col-sm-6 col-lg-3 mb-4" *ngFor="let item of statData">
+                    <i [class]="item.icon + ' fs-1 text-primary'"></i>
+                    <h3 class="mt-3 mb-1">
+                        {{ animatedNumbers[item.id] || 0 }}{{ item.suffix || '' }}
+                    </h3>
+                    <p class="mb-0">{{ item.label }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

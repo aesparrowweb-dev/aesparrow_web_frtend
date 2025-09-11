@@ -1,0 +1,73 @@
+.bg-dark {
+  background-color: #0b1e36 !important;
+}
+
+h2{
+  color: #ffffff;
+}
+
+.bi-check-circle-fill {
+  font-size: 1.2rem;
+}
+
+p{
+  color: #828FA0 !important
+}
+
+.customtext{
+  color: #004AAD !important
+}
+
+
+button {
+  background-color: #004AAD;
+}
+
+button:hover{
+  background-color: #004AAD;
+}
+
+
+.checkmark-blue {
+  color: #004AAD !important;
+}
+
+span{
+     color: #828FA0 !important
+}
+strong{
+  color: #ffffff !important
+}
+
+.buttons {
+  background: transparent;
+  color: #FFFFFF;
+  padding: 8px 20px;
+  border: 2px solid #004AAD;
+    background-color: #004AAD;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease-in-out;
+}
+
+.buttons::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #004AAD;
+  top: 100%;
+  left: 0;
+  transition: top 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.buttons:hover::before {
+  top: 0;
+}
+
+.buttons:hover {
+  color: white;
+  background-color: transparent;
+}

@@ -1,0 +1,22 @@
+<div class="main-container py-5" *ngIf="subTools?.tools_we_use">
+  <div class="container">
+    <div class="row align-items-cente">
+      <div class="col-md-6" data-aos="fade-up-right">
+        <div class="tools-image-wrapper rounded">
+          <img src="assets/images/sub_service/tools.jpg" class="img-fluid w-100" alt="Tools Illustration">
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up-left">
+        <h2 class="fw-bold mb-4">{{ subTools?.tools_title }}</h2>
+
+        <div class="d-flex flex-wrap gap-3 mt-5">
+          <div *ngFor="let tool of subTools?.tools_we_use" class="tool-badge d-flex align-items-center gap-2 px-3 py-2 rounded shadow-sm">
+            <i class="bi bi-tools text-primary"></i>
+            <span class="fw-semibold">{{ tool }}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

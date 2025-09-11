@@ -1,0 +1,20 @@
+<div class="main-container pb-5" *ngIf="subBenifits.benifits">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">{{subBenifits.benifits_title}}</h2>
+        <div class="row align-items-center g-5">
+            <div class="col-md-6 text-center">
+                <img src="assets/images/sub_service/benefits.png" class="img-fluid rounded-3"
+                    data-aos="zoom-in" data-aos-delay="200" style="max-height: 400px; object-fit: cover;" />
+            </div>
+
+            <div class="col-md-6">
+                <ul class="list-group list-group-flush benefits-list">
+                    <li class="list-group-item px-4 py-3" *ngFor="let item of subBenifits.benifits; let i = index">
+                        <span class="badge bg-primary me-3">0{{ i + 1 }}</span>
+                        {{ item }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

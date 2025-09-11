@@ -1,0 +1,28 @@
+<div class="testimonial-container  py-5">
+    <div class="heading text-center">
+        <h2>What Our Clients Say</h2>
+        <p class="sub">AESPARROW helped us uncover critical vulnerabilities we didn't even know existed.</p>
+    </div>
+
+    <div class="carousel-container pt-5">
+        <ngx-slick-carousel #slickModal class="carousel text-center" [config]="slideConfig">
+            <div class="mb-4" ngxSlickItem aria-hidden="true" *ngFor="let item of data">
+                <div class="d-flex justify-content-center">
+                    <img class="img-fluid" [src]="item.img" alt="client-img">
+                </div>
+                <div class="mt-4">
+                    <h5 class="mb-0 text-white">{{item.title}}</h5>
+                    <p class="py-3">{{item.description}}</p>
+                    <h4 class="mb-0 position">{{item.position}}</h4>
+                </div>
+
+            </div>
+        </ngx-slick-carousel>
+        <div class="custom-prev" (click)="slickModal.slickPrev()">
+            <i class="bi bi-chevron-left fs-2 text-primary"></i>
+        </div>
+        <div class="custom-next" (click)="slickModal.slickNext()">
+            <i class="bi bi-chevron-right fs-2 text-primary"></i>
+        </div>
+    </div>
+</div>

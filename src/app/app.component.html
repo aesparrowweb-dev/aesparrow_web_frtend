@@ -1,0 +1,19 @@
+<app-loader></app-loader>
+<div class="component-wrapper">
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-cta></app-cta>
+  <app-footer></app-footer>
+</div>
+
+<button (click)="scrollToTop()" class="scroll-to-top" *ngIf="isShowScrollButton">
+  <img src="assets/images/icons/upArrow.png" />
+</button>
+
+
+<div class="overlay" (click)="responsiveService.openResponsive()" *ngIf="responsiveService.isResponsiveOpen | async">
+</div>
+
+<div class="nav" *ngIf="responsiveService.isResponsiveOpen | async">
+  <app-responsive-header></app-responsive-header>
+</div>

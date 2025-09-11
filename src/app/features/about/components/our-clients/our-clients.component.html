@@ -1,0 +1,28 @@
+<div class="main-container py-5" *ngIf="testimonialData && testimonialData.length>0">
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center text-white">What Our Client Says</h1>
+            <div class="testimonials">
+                <div class="content pt-4">
+                    <div class="slick-prev2" (click)="goToPrevSlide()">
+                        <span><img src="assets/images/icons/Vector 26.svg" alt="left-arrow"></span>
+                    </div>
+                    <div class="slick-next2" (click)="goToNextSlide()">
+                        <span><img src="assets/images/icons/Vector 27.svg" alt="right-arrow"></span>
+                    </div>
+                    <ngx-slick-carousel class="" #slickModal="slick-carousel" [config]="slideconfig">
+                        <div ngxSlickItem class="item bg-white p-3" *ngFor="let data of testimonialData">
+                            <div class="d-flex justify-content-center text-center" *ngIf="testimonialData">
+                                <img src="{{data.img}}" alt="coffee-img">
+                            </div>
+                            <!-- <h5 class="title text-center name py-2">{{data.name}}</h5>
+                            <h5 class="title text-center des pt-2">{{data.designation}}</h5>
+                            <h5 class="title text-center des">{{data.company}}</h5> -->
+                            <p class="description mt-4">{{data.quote}}</p>
+                        </div>
+                    </ngx-slick-carousel>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

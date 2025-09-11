@@ -1,0 +1,176 @@
+.wrapper {
+    overflow-y: hidden;
+     overflow-x: hidden;
+    padding: 20px 0;
+    margin: 0 0 0 2%;
+}
+
+.theme {
+    background-color: #0b1e36 !important;
+   
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #FFFFFF
+}
+
+
+.scrollx {
+    display: flex;
+
+    .col {
+        p {
+            font-size: .8em;
+        }
+    }
+}
+
+
+.content {
+    width: 99%;
+}
+
+.item {
+    position: relative;
+    min-width: 290px;
+    height: 351px;
+    margin: 0 10px;
+    padding: 15px;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* Overlay */
+.item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    /* Black-blue overlay */
+    border-radius: 15px;
+    z-index: 1;
+}
+
+/* Content layer */
+.item .text {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Heading on top */
+.item .text h4 {
+    align-self: center;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: auto;
+    color: var(--ic-tertiary-font-color);
+    margin-top: 20%;
+    /* Yellow or your theme color */
+}
+
+/* Description center aligned */
+.item .text p {
+    font-size: 14px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 14%;
+}
+
+
+
+.item:nth-child(1) {
+    background-image: url("^/assets/images/home/web.webp");
+    margin-left: 0 !important;
+}
+
+.item:nth-child(2) {
+    background-image: url("^/assets/images/home/mobile.jpg");
+}
+
+.item:nth-child(3) {
+    background-image: url("^/assets/images/home/security.jpg");
+}
+
+.item:nth-child(4) {
+    background-image: url("^/assets/images/home/server.avif");
+}
+
+.item:nth-child(5) {
+    background-image: url("^/assets/images/home/cloud.webp");
+}
+
+.item:nth-child(6) {
+    background-image: url("^/assets/images/home/wireless.jpg");
+}
+
+.item:nth-child(7) {
+    background-image: url("^/assets/images/home/api.jpg");
+}
+
+.item:nth-child(8) {
+    background-image: url("^/assets/images/home/source.jpg");
+}
+
+.item:nth-child(9) {
+    background-image: url("^/assets/images/home/iot.jpg");
+}
+
+.item:nth-child(10) {
+    background-image: url("^/assets/images/home/cial.jpg");
+}
+
+.item:nth-child(11) {
+    background-image: url("^/assets/images/home/red.jpg");
+}
+
+.item:nth-child(12) {
+    background-image: url("^/assets/images/home/black.png");
+}
+
+.item:nth-child(13) {
+    background-image: url("^/assets/images/home/white.png");
+}
+
+.item:nth-child(14) {
+    background-image: url("^/assets/images/home/grey.png");
+}
+
+.item {
+
+    h4 {
+        color: var(--yellow);
+        font-size: var(--button-font);
+    }
+}
+
+
+@media (max-width: 990px) {
+    h1 {
+        font-size: var(--responsive-font);
+        padding-bottom: 0;
+    }
+
+    .para {
+        width: 95%;
+    }
+
+    .item {
+        height: 300px;
+        width: 250px;
+    }
+}

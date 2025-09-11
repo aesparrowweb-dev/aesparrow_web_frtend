@@ -1,0 +1,87 @@
+.main {
+    position: relative;
+    background-image: url("^assets/images/about/about_us.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+h1 {
+    color: #004AAD;
+    font-family: 'poppins' !important;
+    font-size: 56px;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+background: rgba(0, 0, 0, 0.5);
+
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumbs {
+    z-index: 2;
+
+    ul {
+        display: flex;
+
+    }
+
+    li {
+        list-style: none;
+        color: var(--ic-tertiary-font-color);
+        font-size: 19px;
+    }
+
+    a {
+        color: var(--ic-accent-font-color1);
+        text-decoration: none;
+    }
+
+}
+
+@media (max-width: 991px) {
+    .breadcrumbs {
+        z-index: 2;
+        margin-top: 60px;
+
+        li {
+            list-style: none;
+            color: var(--ic-tertiary-font-color);
+            font-size: 16px !important;
+        }
+    }
+
+
+    @media (max-width: 767px) {
+        .breadcrumbs {
+            ul {
+                padding: 0;
+                flex-wrap: wrap;
+            }
+
+            li {
+                font-size: 16px;
+            }
+        }
+
+
+        h1 {
+            font-size: 45px;
+        }
+
+    }
+}

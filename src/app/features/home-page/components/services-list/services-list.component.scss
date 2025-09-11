@@ -1,0 +1,152 @@
+
+.main-container{
+  background-color: #0b1e36 !important;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #FFFFFF
+}
+
+h3{
+  color: #004AAD !important;
+}
+
+.container .box {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  margin: 20px;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #1a1a1a;
+  cursor: pointer;
+}
+
+/* Image container */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+/* Glitch image */
+.glitch-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch-img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.original-img {
+  z-index: 1;
+}
+
+.glitch-img-hover {
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.box:hover .glitch-img-hover {
+  animation: glitchReveal 2s forwards;
+}
+
+@keyframes glitchReveal {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Overlay title */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px 25px 0 0;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.overlay h4.card-title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+
+.box:hover .overlay {
+  animation: fadeOutOverlay 2s forwards;
+}
+
+@keyframes fadeOutOverlay {
+  0% { opacity: 1; }
+  99% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.card-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, black, #004AAD);
+  border-radius: 25px;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.box:hover .card-description {
+  animation: showDescription 0s 1s forwards;
+}
+
+@keyframes showDescription {
+  to {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .box {
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+/* ≥ 1200px: 3 slides */
+@media (min-width: 1200px) {
+  .box {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+  }
+}

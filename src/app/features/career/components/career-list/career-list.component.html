@@ -1,0 +1,50 @@
+<app-career-banner></app-career-banner>
+<div class="main py-5">
+    <h2 class="text-center mb-4"><strong>Explore Career Opportunities at AESPARROW</strong></h2>
+    <div class="non-teaching-staff">
+        <div class="pb-5">
+            <div class="container non-staff ">
+                <div *ngFor="let data of careerData" class="staff-member" data-aos="fade-up" data-aos-duration="800">
+                    <div class="cards">
+                        <div class="border-span">
+                            <h5 class="pt-2"><strong>{{data.title}}</strong></h5>
+                            <ul>
+                                <li *ngFor="let value of data.responsibilities">{{ value }}</li>
+                            </ul>
+                            <button class="btn buttonsd mt-3" (click)="onClickReadMore(data.id)">Read More</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="overlays" *ngIf="showDialogBox">
+    <div class="job-item">
+        <div class="close">
+            <img (click)="onDialogClose()" src="assets/images/icons/cross.svg" alt="cross">
+        </div>
+        <div *ngIf="JobData">
+            <h2>{{JobData.title}}</h2>
+
+            <div>
+                <strong>Description:</strong>
+                <p>{{JobData.description}}</p>
+            </div>
+            <div class="resp">
+                <strong>Responsibilities:</strong>
+                <ul>
+                    <li *ngFor="let item of JobData.responsibilities">{{ item }}</li>
+                </ul>
+            </div>
+            <p><strong>Location: </strong>{{JobData.location}}</p>
+            <p><strong>No Of Opening: </strong>{{JobData.noOfOpenings}}</p>
+            <div class="buttons">
+                <button class="btn buttonsd mt-3" (click)="onClickApply()">Apply</button>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,55 @@
+.card {
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+.card-header {
+    cursor: pointer;
+}
+
+.main-container {
+    background-color: #0b1e36 !important;
+      overflow-y: hidden; 
+}
+
+
+
+h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #FFFFFF
+}
+
+.policy-card {
+  background-color: #fff;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+
+  .step-number {
+    min-width: 60px;
+    text-align: center;
+  }
+
+  &:hover {
+    background-color: #0b1e36;
+    color: #fff;
+    border: 3px solid #FFFFFF;
+
+    h5, p, .step-number {
+      color: #fff !important;
+    }
+  }
+
+  h5 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}

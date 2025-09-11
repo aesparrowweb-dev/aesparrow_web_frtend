@@ -1,0 +1,107 @@
+[
+    {
+        "id": "cybersecurity-consulting-services",
+        "header_title": "Cybersecurity Consulting Services",
+        "title": "Cybersecurity Consulting Services"
+    },
+    {
+        "id": "cybersecurity-consulting-services/risk-assessment",
+        "sub_title": "Risk Assessment",
+        "title": "Risk Assessment"
+    },
+    {
+        "id": "cybersecurity-consulting-services/policy-development",
+        "sub_title": "Policy Development",
+        "title": "Policy Development"
+    },
+    {
+        "id": "cybersecurity-consulting-services/security-architecture-review",
+        "sub_title": "Security Architecture Review",
+        "title": "Security Architecture Review"
+    },
+    {
+        "id": "cybersecurity-consulting-services/vciso-services",
+        "sub_title": "vCISO (Virtual CISO) Services",
+        "title": "vCISO (Virtual CISO) Services"
+    },
+    {
+        "id": "vapt-services",
+        "header_title": "VAPT Services",
+        "title": "VAPT Services (Vulnerability Assessment & Penetration Testing)"
+    },
+    {
+        "id": "vapt-services/web-application-testing",
+        "sub_title": "Web Application Testing",
+        "title": "Web Application Testing"
+    },
+    {
+        "id": "vapt-services/mobile-application-testing",
+        "sub_title": "Mobile Application Testing",
+        "title": "Mobile Application Testing (Android/iOS)"
+    },
+    {
+        "id": "vapt-services/api-security-testing",
+        "sub_title": "API Security Testing",
+        "title": "API Security Testing"
+    },
+    {
+        "id": "vapt-services/Network-and-Server-VAPT",
+        "sub_title": "Network & Server VAPT",
+        "title": "Network & Server VAPT (Internal & External)"
+    },
+    {
+        "id": "cloud-security-testing",
+        "sub_title": "Cloud Security Testing",
+        "title": "Cloud Security Testing"
+    },
+    {
+        "id": "governance-risk-and-compliance",
+        "header_title": "GRC Services",
+        "title": "GRC Services (Governance, Risk, and Compliance)"
+    },
+    {
+        "id": "governance-risk-and-compliance/governance-and-security-policy-design",
+        "sub_title": "Governance & Security Policy Design",
+        "title": "Governance & Security Policy Design"
+    },
+    {
+        "id": "governance-risk-and-compliance/compliance-audits",
+        "sub_title": "Compliance Audits",
+        "title": "Compliance Audits"
+    },
+    {
+        "id": "governance-risk-and-compliance/internal-audit-services",
+        "sub_title": "Internal Audit Services",
+        "title": "Internal Audit Services"
+    },
+    {
+        "id": "governance-risk-and-compliance/cyber-resilience-drills",
+        "sub_title": "Cyber Resilience Drills",
+        "title": "Cyber Resilience Drills"
+    },
+    {
+        "id": "other-services",
+        "header_title": "Other Services",
+        "title": "Other Services"
+    },
+    {
+        "id": "other-services/source-code-review",
+        "sub_title": "Source Code Review",
+        "title": "Source Code Review"
+    },
+    {
+        "id": "other-services/devsecops-integration",
+        "sub_title": "DevSecOps Integration",
+        "title": "DevSecOps Integration"
+    },
+    {
+        "id": "other-services/security-awarness-training",
+        "sub_title": "Security Awareness Training",
+        "title": "Security Awareness Training"
+    },
+    {
+        "id": "other-services/red-teaming",
+        "sub_title": "Red Teaming",
+        "title": "Red Teaming"
+    }
+]

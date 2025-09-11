@@ -1,0 +1,27 @@
+<div class="main-container">
+    <div class="container">
+        <div class="blogs">
+            <h1 class="text-center">Our Team</h1>
+            <p class="py-3 data">At the heart of <strong>AESPARROW</strong> is a <strong>diverse and highly experienced team </strong>of
+                cybersecurity professionals, auditors, compliance specialists, and ethical hackers. Our experts combine
+                technical depth with strategic insight, helping organizations secure their environments and meet complex
+                regulatory requirements.</p>
+            <h3 class="text-center pb-4">Meet Our Key Team Members</h3>
+            <div class="slick-prev1" (click)="goToPrevSlide()">
+                <span><img src="assets/images/Vector 7.svg" alt="left"></span>
+            </div>
+            <div class="slick-next1" (click)="goToNextSlide()">
+                <span><img src="assets/images/Vector 7 (1).svg" alt="right"></span>
+            </div>
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideconfig">
+                <div ngxSlickItem class="item" *ngFor="let item of blogs" data-aos="fade-up">
+                    <img src="{{item.img}}" alt="" class="img-fluid imgg">
+                    <h4 class="py-3">{{item.heading}}</h4>
+                    <!-- <p class="experince">{{item.experince}}</p> -->
+                    <p class="desc">{{item.subheading}}</p>
+                </div>
+            </ngx-slick-carousel>
+
+        </div>
+    </div>
+</div>

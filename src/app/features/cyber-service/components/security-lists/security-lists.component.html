@@ -1,0 +1,22 @@
+<div class="main-container py-5" *ngIf="subSecurityLists?.security_lists">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-3" data-aos="fade-up">{{ subSecurityLists?.security_review_title }}</h2>
+    <p class="text-center mb-3 desc"  data-aos="fade-up" data-aos-delay="100">{{ subSecurityLists?.security_desc }}</p>
+    <h4 class="text-center fw-semibold mb-4" data-aos="fade-up" data-aos-delay="200">{{ subSecurityLists?.security_subtitle }}</h4>
+
+    <div class="row g-4">
+      <div class="col-12" *ngFor="let item of subSecurityLists.security_lists; let i = index">
+        <div class="security-card d-flex rounded shadow-sm bg-white"
+             data-aos="fade-right" [attr.data-aos-delay]="i * 100">
+          <div class="number-strip d-flex align-items-center justify-content-center px-3">
+            <span class="fs-5 fw-bold text-white">0{{ i + 1 }}</span>
+          </div>
+          <div class="p-4 flex-grow-1">
+            <h5 class="fw-bold mb-2">{{ item.title }}</h5>
+            <p class="text-muted mb-0">{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

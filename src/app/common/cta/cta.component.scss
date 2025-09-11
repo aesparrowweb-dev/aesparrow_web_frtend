@@ -1,0 +1,55 @@
+.cta-section {
+  background: linear-gradient(to right, #0b1e36, #004aad);
+  color: white;
+  padding: 3rem 1rem;
+}
+
+.btn-cta {
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.scale-hover:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pulse-on-load {
+  animation: pulse 2s infinite ease-in-out;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.slide-hover {
+  position: relative;
+  overflow: hidden;
+}
+.slide-hover::after {
+  content: '';
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: width 0.4s ease;
+  z-index: 0;
+}
+.slide-hover:hover::after {
+  width: 100%;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #FFFFFF
+}
+
+
+.btn:hover{
+    text-decoration: none !important    ;
+}

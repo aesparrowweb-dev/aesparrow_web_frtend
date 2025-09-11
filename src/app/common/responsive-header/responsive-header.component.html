@@ -1,0 +1,50 @@
+<section>
+    <div class="navheader">
+        <a (click)="sidenavService.closeResponsive()">
+            <img src="assets/images/logo.png" class="logo" alt="logo">
+        </a>
+        <a (click)="sidenavService.closeResponsive()">
+            <i class="bi bi-x cross"></i>
+        </a>
+    </div>
+    <hr class="line">
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a routerLink="/about" (click)="sidenavService.closeResponsive()">About Us</a>
+                </li>
+                <li class="menu-item">
+                    <div class="flexes">
+                        <a (click)="sidenavService.closeResponsive()">
+                            Our Services
+                        </a>
+
+                        <i  (click)="toggleServicesDropdown()" class="bi bi-chevron-up chevron-white"  [class.rotate-180]="isServicesOpen">
+                        </i>
+                    </div>
+                    <ul *ngIf="isServicesOpen" class="dropdown" @staggerChildren>
+                        <li *ngFor="let service of serviceData" >
+                            <div class="flexes" (click)="toggleSubService(service.id)" >
+                                <a (click)="onClickService(service.id)"> {{ service?.header_title || 'Unnamed' }}</a>
+                                <i  (mouseenter)="mainServiceId = service.id" class="bi bi-chevron-right chevron-white"
+                                   [class.rotate-90]="openSubServiceId === service.id">
+                                </i>
+
+                            </div>
+                            <ul *ngIf="openSubServiceId === service.id" class="dropdown-sub-menu" @staggerChildren>
+                                <li *ngFor="let sub of service.children">
+                                    <a (click)="onClickSubService(sub.id)">{{ sub?.sub_title || 'Unnamed Sub' }}</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a routerLink="/industries" (click)="sidenavService.closeResponsive()">Industries</a></li>
+                <li><a routerLink="/blogs" (click)="sidenavService.closeResponsive()">Blogs & Insights</a></li>
+                <li><a routerLink="/career" (click)="sidenavService.closeResponsive()">Careers</a></li>
+                <li><a routerLink="/contact" (click)="sidenavService.closeResponsive()">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+</section>

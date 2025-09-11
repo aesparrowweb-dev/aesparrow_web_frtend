@@ -1,0 +1,16 @@
+<div class="main" [ngStyle]="{'background-image': 'url('+ subBanner.sub_img + ')'}">
+    <div class="row">
+        <div class="overlay"></div>
+        <div class="breadcrumbs">
+            <ul>
+                <li class="px-1"><a href="/home">Home &nbsp;/</a></li>
+                <li class="px-1"><a href="/about">Services &nbsp;/</a></li>
+                <li class="px-1"><a href="">{{mainData?.title}} &nbsp;/</a></li>
+                <li class="px-1">{{subBanner?.title}}</li>
+            </ul>
+        </div>
+        <div class="content py-5">
+            <h1>{{subBanner?.title}}</h1>
+        </div>
+    </div>
+</div>

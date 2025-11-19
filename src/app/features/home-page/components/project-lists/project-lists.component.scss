@@ -1,0 +1,51 @@
+.main-container {
+  position: relative;
+  background-color: #0b1e36 !important;
+  background-image: url("/assets/images/bm1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+
+.main-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.main-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+h3,
+h2 {
+  color: #ffffff;
+}
+
+h4 {
+  color: #FFFFFF;
+  font-size: 36px !important;
+}
+
+p {
+  color: #828FA0 !important
+}
+
+span {
+  color: #004AAD;
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 900;
+  text-transform: uppercase;
+}

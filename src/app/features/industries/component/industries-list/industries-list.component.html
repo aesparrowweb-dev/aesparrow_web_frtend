@@ -1,0 +1,51 @@
+<div class="main-container py-5">
+    <div class="container">
+        <h2 class="text-center">Industries We Secure</h2>
+        <p class="pt-3">At <strong>AESPARROW CONSULTING PVT LTD</strong>, we understand that cybersecurity is never a
+            one-size-fits-all
+            solution. Every
+            industry has its own ecosystem, regulatory environment, and threat landscape. That’s why we deliver
+            <strong>industry-specific cybersecurity and compliance services</strong> — ensuring your infrastructure,
+            data,
+            and operations
+            remain secure, resilient, and compliant in an ever-evolving digital world.
+        </p>
+        <p>Explore how AESPARROW empowers businesses across key sectors:</p>
+    </div>
+
+    <div class="container pt-4">
+        <div *ngFor="let item of industries; let i = index" class="row align-items-center mb-5 flex-column flex-md-row"
+            [ngClass]="{'flex-md-row-reverse': i % 2 !== 0}" [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'">
+
+            <div class="col-md-6" data-aos="zoom-in">
+                <div class="position-relative text-center industry-image-wrapper">
+                    <img [src]="item.img" [alt]="item.title" class="img-fluid rounded shadow w-100" />
+                    <div class="industry-title-overlay">
+                        <h2>{{ item.title }}</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mt-4 mt-md-0" data-aos="fade-up">
+                <h5 class="text-primary">Challenges:</h5>
+                <ul>
+                    <li class="mb-2 d-flex align-items-start" *ngFor="let challenge of item.challenges">
+                        <span class="me-2">
+                              <i class="bi bi-check-circle-fill checkmark-blue me-3" style="font-size: 1.5rem;"></i>
+                        </span>
+                        {{ challenge }}
+                    </li>
+                </ul>
+                <h5 class="textSuccess">Solutions:</h5>
+                <ul>
+                    <li class="mb-2 d-flex align-items-start" *ngFor="let solution of item.solutions">
+                        <span class="me-2">
+                             <i class="bi bi-check-circle-fill checkmark-blue me-3" style="font-size: 1.5rem;"></i>
+                        </span>
+                        {{ solution }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

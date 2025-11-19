@@ -1,0 +1,73 @@
+.numbers {
+    color: #004AAD;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.main-container {
+    background-color: #0b1e36;
+
+}
+
+.silver-logo {
+    filter: grayscale(100%) brightness(1.2);
+    transition: filter 0.3s ease;
+    height: 70px;
+}
+
+.silver-logo:hover {
+    filter: grayscale(0%) brightness(1);
+}
+
+
+
+.scroll-container {
+  overflow: hidden;
+  width: 100%; 
+}
+
+.image-wrapper {
+  display: flex;
+  gap: 20px; 
+  width: max-content;
+  animation: scroll-left 20s linear infinite;
+}
+
+.image-wrapper img {
+  width: auto; 
+  height: 70px !important;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); 
+  }
+}
+
+.reverse-scroll .image-wrapper {
+  animation: scroll-right 20s linear infinite; 
+}
+
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0); 
+  }
+}
+
+
+ img {
+  height: auto !important;
+  margin: 5px 20px;
+}

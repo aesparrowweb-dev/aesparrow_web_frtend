@@ -1,0 +1,132 @@
+.main-container {
+    background-color: #0b1e36 !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+      overflow-y: hidden; 
+}
+
+h1 {
+    font-size: 34px;
+    font-family: 'poppins' !important;
+}
+
+.testimonials {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.content {
+    position: relative;
+}
+
+.item {
+    border-radius: 15px;
+    margin: 10px 15px;
+    background: linear-gradient(45deg, black, #004AAD);
+    // height: 440px;
+
+    img {
+        height: 100px;
+    }
+}
+
+p.description {
+    height: 160px;
+    overflow-y: auto;
+    color: #ffffff;
+}
+
+p.title {
+    font-weight: 600;
+}
+
+.name {
+    color: var(--ic-tertiary-font-color) !important;
+}
+
+.des {
+    color: #fff !important
+}
+
+.slick-prev2,
+.slick-next2 {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 1 !important;
+    background: rgba(255, 255, 255, 0.23) !important;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 16px !important;
+    cursor: pointer;
+
+    img {
+        height: 22px;
+    }
+}
+
+.slick-prev2 {
+    left: -7% !important;
+}
+
+.slick-next2 {
+    right: -7% !important;
+}
+
+::ng-deep .slick-slide.slick-center {
+    transform: scaleY(1) !important;
+}
+
+.slick-slide {
+    transition: all .3s ease-in-out;
+}
+
+.slick-slide {
+    transform: scaleY(.9);
+}
+
+.slick-prev2:before,
+.slick-next2:before {
+    font-family: "slick" !important;
+    font-size: 26px !important;
+    line-height: 1 !important;
+    color: white !important;
+    opacity: 1 !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    z-index: 1 !important;
+}
+
+::ng-deep .slick-dots li.slick-active button:before {
+    color: #FFFFFF !important;
+}
+
+::ng-deep .slick-dots li button {
+    color: rgb(255 255 255 / 23%);
+}
+
+::ng-deep .slick-dots li button:before {
+    color: #FFFFFF !important;
+    font-size: 12px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .item {
+        margin: 15px 5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .testimonials {
+        width: 100%;
+    }
+
+    .slick-prev2,
+    .slick-next2 {
+        display: none;
+    }
+}

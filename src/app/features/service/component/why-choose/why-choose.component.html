@@ -1,0 +1,32 @@
+<div class="main-container">
+    <h2 class="text-center">{{servicechoose.whyChoose_title}}</h2>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="row g-4">
+                    <div class="col-sm-6" *ngFor="let item of servicechoose.whyChoose; let i = index">
+                        <div class="card h-100 shadow-sm rounded-4 p-3 d-flex card-border-animated position-relative"
+                            data-aos="fade-up" [attr.data-aos-delay]="i * 100">
+                            <div class="border-line line-top"></div>
+                            <div class="border-line line-right"></div>
+                            <div class="border-line line-bottom"></div>
+                            <div class="border-line line-left"></div>
+                            <div class="d-flex align-items-start gap-3 h-100 position-relative" style="z-index: 2">
+                                <img [src]="item.icons" alt="{{ item.title }}" style="width: 50px; height: 50px" />
+                                <div>
+                                    <h5 class="mb-1">{{ item.title }}</h5>
+                                    <p class="mb-0 text-white">{{ item.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 d-flex justify-content-center align-items-center">
+                <img src="assets/images/why_choose/whyChoose.png" alt="Why Choose Us" class="img-fluid rounded-3"
+                    data-aos="zoom-in" data-aos-delay="200" style="max-height: 400px; object-fit: cover;" />
+            </div>
+        </div>
+    </div>
+</div>

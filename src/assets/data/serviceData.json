@@ -1,0 +1,930 @@
+[
+    {
+        "id": "cybersecurity-consulting-services",
+        "mainBanner": "assets/images/main-services/cyber-banner.webp",
+        "header_title": "Cybersecurity Consulting Services",
+        "title": "Cybersecurity Consulting Services",
+        "desc1": "At AESPARROW CONSULTING PVT LTD., we provide comprehensive Cybersecurity Consulting services designed to strengthen your organization’s security posture. Our team of experienced cybersecurity professionals works closely with your team to assess, plan, and implement tailored solutions that address your unique security needs. We focus on proactive measures, compliance, and strategic guidance to safeguard your organization from cyber threats, ensuring that your systems, data, and infrastructure are protected against evolving risks.",
+        "desc2": "Our team of cybersecurity experts collaborates closely with your organization to assess current risks, develop strategic plans, and implement customized solutions aligned with your specific security requirements. We prioritize proactive risk management, regulatory compliance, and long-term strategic guidance to protect your systems, data, and infrastructure against evolving cyber threats.",
+        "conclusion": "By offering these services, AESPARROW CONSULTING PVT LTD. ensures that your organization is not only protected but also prepared to grow in a secure and resilient digital environment. Let us help you design a future-proof cybersecurity strategy that aligns with your business goals and provides robust protection against evolving cyber threats.",
+        "whyChoose_title": "Why Choose AESPARROW for Cybersecurity Consulting?",
+        "whyChoose": [
+            {
+                "title": "Expertise",
+                "icons": "assets/images/why_choose/expertise.png",
+                "description": "Our team brings decades of combined experience in cybersecurity, risk management, and compliance."
+            },
+            {
+                "title": "Tailored Solutions",
+                "icons": "assets/images/why_choose/tailored.png",
+                "description": "We don’t offer one-size-fits-all services. Every cybersecurity strategy we implement is customized to meet the unique needs of your business."
+            },
+            {
+                "title": "Proactive Approach",
+                "icons": "assets/images/why_choose/approach.png",
+                "description": "AESPARROW is committed to staying ahead of emerging cyber threats and ensuring that your organization is always one step ahead of potential attackers."
+            },
+            {
+                "title": "Industry Recognition",
+                "icons": "assets/images/why_choose/industrial.png",
+                "description": "We hold several industry certifications (ISO 27001, SOC 2, etc.) and maintain strategic partnerships with global leaders in cybersecurity technologies."
+            }
+        ],
+        "children": [
+            {
+                "id": "risk-assessment",
+                "sub_title": "Risk Assessment",
+                "sub_img": "assets/images/sub_service/risk.jpg",
+                "title": "Risk Assessment",
+                "desc1": "A Risk Assessment is a critical first step in understanding your organization's cybersecurity vulnerabilities and threats. By identifying and evaluating potential risks, AESPARROW helps you understand where your security infrastructure is most vulnerable, enabling you to prioritize remediation efforts effectively.",
+                "desc2": "",
+                "includes_title": "Our Risk Assessment Service Includes",
+                "includes": [
+                    {
+                        "title": "Threat Identification",
+                        "icons": "assets/images/why_choose/threat.png",
+                        "description": "Pinpointing the most likely and most damaging threats to your organization, including cyberattacks, insider threats, data breaches, and system failures."
+                    },
+                    {
+                        "title": "Vulnerability Scanning",
+                        "icons": "assets/images/why_choose/Vulnerability.png",
+                        "description": "Utilizing industry-leading tools to scan your systems for weaknesses that could be exploited by malicious actors."
+                    },
+                    {
+                        "title": "Impact Analysis",
+                        "icons": "assets/images/why_choose/impact_analysis.png",
+                        "description": "Assessing the potential impact of security incidents on your business, including financial losses, reputational damage, and legal consequences."
+                    },
+                    {
+                        "title": "Risk Mitigation Strategies",
+                        "icons": "assets/images/why_choose/risk-management.png",
+                        "description": "Recommending effective strategies for mitigating identified risks, such as patching vulnerabilities, implementing security controls, and enhancing monitoring systems."
+                    }
+                ],
+                "benifits_title": "Key Benefits of Risk Assessment",
+                "benifits": [
+                    "Proactive identification of vulnerabilities before they are exploited.",
+                    "Data-driven insights to prioritize security improvements.",
+                    "Clear, actionable recommendations for risk mitigation.",
+                    "Enhanced decision-making and resource allocation for security initiatives."
+                ]
+            },
+            {
+                "id": "policy-development",
+                "sub_title": "Policy Development",
+                "sub_img": "assets/images/sub_service/policy.jpg",
+                "title": "Policy Development",
+                "desc1": "Cybersecurity policies are the foundation of any effective security strategy. At AESPARROW, we help you develop tailored cybersecurity policies that align with your organization's goals, industry requirements, and regulatory standards. These policies ensure that security practices are consistent, enforceable, and scalable.",
+                "desc2": "Cybersecurity policies serve as the cornerstone of a robust security framework. At AESPARROW, we specialize in developing customized cybersecurity policies that align with your organization’s strategic objectives, industry best practices, and regulatory obligations. Our approach ensures that your security protocols are consistent, enforceable, and adaptable to evolving business needs.",
+                "includes_title": "Our Policy Development Service Includes",
+                "includes": [
+                    {
+                        "title": "Compliance Mapping",
+                        "description": "Ensuring your policies meet relevant industry regulations such as GDPR, HIPAA, PCI DSS, and ISO 27001, helping you avoid compliance-related issues.We ensure your cybersecurity policies align with key industry regulations—including GDPR, HIPAA, PCI DSS, and ISO 27001—helping you mitigate compliance risks and maintain regulatory readiness."
+                    },
+                    {
+                        "title": "Security Governance",
+                        "description": "Establishing governance frameworks that provide clarity on roles, responsibilities, and processes for maintaining cybersecurity across your organization.We establish governance frameworks that clearly define roles, responsibilities, and processes to support consistent and accountable cybersecurity management across your organization."
+                    },
+                    {
+                        "title": "Incident Response & Recovery Plans",
+                        "description": "Crafting detailed response plans to ensure that your organization is prepared for potential cybersecurity incidents and data breaches, including recovery and business continuity strategies.We develop comprehensive incident response plans to prepare your organization for potential cybersecurity threats and data breaches, incorporating recovery procedures and business continuity strategies to minimize disruption and ensure resilience."
+                    },
+                    {
+                        "title": "Access Control Policies",
+                        "description": "Creating robust policies that define who can access what information and at what level, ensuring that sensitive data is only accessible by authorized individuals.We create robust access control policies that define user permissions and data access levels, ensuring that sensitive information is only available to authorized individuals in accordance with the principle of least privilege."
+                    },
+                    {
+                        "title": "Employee Security Awareness",
+                        "description": "Developing training materials and programs to ensure that employees understand their role in protecting the organization’s data and systems.We design targeted training programs and educational materials to ensure employees understand their responsibilities in safeguarding the organization’s data and systems, fostering a security-aware culture across all levels."
+                    }
+                ],
+                "benifits_title": "Key Benefits of Policy Development",
+                "benifits": [
+                    "Improved regulatory compliance.",
+                    "Establishment of clear guidelines and processes for security practices.",
+                    "Consistency in handling security threats across departments.",
+                    "Increased employee awareness and adherence to cybersecurity best practices."
+                ],
+                "cyberSecurity_policy_title": "Key Benefits of Cybersecurity Policy Development",
+                "cybersecurity_policy": [
+                    {
+                        "title": "Enhanced Regulatory Compliance",
+                        "description": "Aligns organizational practices with industry standards and regulatory frameworks such as GDPR, HIPAA, PCI DSS, and ISO 27001."
+                    },
+                    {
+                        "title": "Clear Security Framework",
+                        "description": "Establishes well-defined guidelines and procedures that promote consistent and effective security practices across the organization."
+                    },
+                    {
+                        "title": "Consistent Threat Response",
+                        "description": "Ensures uniformity in identifying, managing, and responding to security threats across departments and business units."
+                    },
+                    {
+                        "title": "Improved Security Awareness",
+                        "description": "Promotes a culture of security by increasing employee understanding and adherence to cybersecurity responsibilities and best practices."
+                    }
+                ]
+            },
+            {
+                "id": "security-architecture-review",
+                "sub_title": "Security Architecture Review",
+                "sub_img": "assets/images/sub_service/security-architecture.jpg",
+                "title": "Security Architecture Review",
+                "desc1": "The Security Architecture Review ensures that your organization’s digital infrastructure is built with security in mind from the ground up. AESPARROW evaluates your existing security frameworks, identifies gaps, and provides recommendations to improve your defences and resilience.",
+                "desc2": "Our Security Architecture Review ensures that your organization’s digital infrastructure is designed with security at its core. At AESPARROW, we assess your existing security frameworks, identify vulnerabilities and architectural gaps, and deliver actionable recommendations to strengthen your defences and enhance overall cyber resilience.",
+                "includes_title": "Our Security Architecture Review Service Includes",
+                "includes": [
+                    {
+                        "title": "Infrastructure Evaluation",
+                        "description": "Analysing your network, systems, and applications to identify potential security weaknesses or misconfigurations.We conduct in-depth analysis of your network, systems, and applications to uncover potential security weaknesses, misconfigurations, and areas of exposure that could be exploited by threat actors."
+                    },
+                    {
+                        "title": "Perimeter Défense",
+                        "description": "Reviewing firewalls, intrusion detection systems, and access controls to ensure they are effectively protecting your organization’s perimeter.We review critical security components such as firewalls, intrusion detection systems (IDS), and access controls to ensure they are properly configured and effectively safeguarding your organization’s perimeter against external and internal threats."
+                    },
+                    {
+                        "title": "Internal Network Security: ",
+                        "description": "Assessing the security of internal communications, data transfers, and shared resources to prevent lateral movement in case of a breach.We assess the security of internal communications, data transfers, and shared resources to minimize the risk of lateral movement within your network in the event of a breach."
+                    },
+                    {
+                        "title": "Cloud Security Architecture",
+                        "description": "Reviewing cloud-based systems and services (AWS, Azure, GCP) to ensure they follow best practices for secure configuration, data protection, and access management.We review cloud-based environments—including AWS, Azure, and GCP—to ensure adherence to security best practices for configuration, data protection, and access management, helping to safeguard your cloud assets from misconfigurations and unauthorized access"
+                    },
+                    {
+                        "title": "Security Integration",
+                        "description": "Evaluating the integration of security tools and technologies (such as SIEM, endpoint protection, and vulnerability scanners) into your overall architecture to improve threat detection and response.We evaluate how security tools and technologies—such as SIEM solutions, endpoint protection platforms, and vulnerability scanners—are integrated into your overall architecture to enhance threat detection, response capabilities, and operational efficiency."
+                    }
+                ],
+                "benifits_title": "Key Benefits of Security Architecture Review",
+                "benifits": [
+                    "Identification of gaps and vulnerabilities in your current infrastructure.",
+                    "Enhanced ability to prevent cyberattacks through stronger defences.",
+                    "Alignment of your security architecture with industry standards and best practices.",
+                    "A clear roadmap for improving security measures and reducing risk."
+                ],
+                "security_review_title": "Security Architecture Review",
+                "security_desc": "At AESPARROW, our Security Architecture Review ensures your organization’s digital infrastructure is designed with security at its foundation. We take a holistic approach to evaluating your existing security posture, identifying vulnerabilities, and providing tailored recommendations to strengthen your cyber defenses and resilience.",
+                "security_subtitle": "Our comprehensive review includes:",
+                "security_lists": [
+                    {
+                        "title": "Architecture Assessment",
+                        "description": "In-depth analysis of your network, systems, and applications to identify potential security weaknesses, misconfigurations, and areas of exposure."
+                    },
+                    {
+                        "title": "Perimeter Defense Review",
+                        "description": "Evaluation of firewalls, intrusion detection systems (IDS), and access controls to ensure effective protection against both internal and external threats."
+                    },
+                    {
+                        "title": "Internal Security Controls",
+                        "description": "Assessment of internal communications, data transfers, and shared resources to prevent lateral movement in the event of a breach."
+                    },
+                    {
+                        "title": "Cloud Security Review",
+                        "description": "Examination of cloud-based platforms (AWS, Azure, GCP) to verify secure configuration, proper data protection practices, and effective access management."
+                    },
+                    {
+                        "title": "Security Tool Integration",
+                        "description": "Evaluation of the integration and effectiveness of security tools—such as SIEM, endpoint protection, and vulnerability scanners—within your architecture to improve threat detection and incident response."
+                    },
+                    {
+                        "title": "Actionable Recommendations",
+                        "description": "Strategic guidance on closing security gaps and aligning your architecture with industry standards and best practices.With AESPARROW, you gain a clear understanding of your current security posture and a roadmap to build a more resilient, secure infrastructure."
+                    }
+                ]
+            },
+            {
+                "id": "vciso-services",
+                "sub_title": "vCISO (Virtual CISO) Services",
+                "title": "vCISO (Virtual CISO) Services",
+                "sub_img": "assets/images/sub_service/visco.jpg",
+                "desc1": "A Virtual Chief Information Security Officer (vCISO) is an outsourced security leadership role that provides high-level, strategic guidance on cybersecurity. AESPARROW offers vCISO services for organizations that need expert security leadership but don’t have the resources or need for a full-time in-house CISO.",
+                "desc2": "A Virtual Chief Information Security Officer (vCISO) provides outsourced, executive-level cybersecurity leadership to guide your organization’s security strategy and risk management efforts. At AESPARROW, our vCISO services deliver expert, strategic oversight tailored to your specific business needs—ideal for organizations that require top-tier security leadership without the cost or commitment of a full-time, in-house CISO.",
+                "desc3": "We help you navigate complex security challenges, align cybersecurity with business objectives, and ensure compliance with relevant regulatory and industry standards.",
+                "includes_title": "Our vCISO Service Includes",
+                "includes": [
+                    {
+                        "title": "Strategic Security Leadership",
+                        "description": ": Our vCISO will work with your executive team to align your cybersecurity strategy with your overall business objectives, ensuring that security is prioritized across all levels of the organization."
+                    },
+                    {
+                        "title": "Security Program Development",
+                        "description": "Helping you design, implement, and manage a comprehensive security program that meets industry standards and addresses your specific business needs."
+                    },
+                    {
+                        "title": "Risk Management",
+                        "description": "Identifying potential risks and overseeing the development and execution of risk management strategies to protect your organization from cyber threats."
+                    },
+                    {
+                        "title": "Incident Response Planning",
+                        "description": "Creating and testing incident response plans, ensuring that your team is ready to act quickly and effectively in the event of a security breach or cyberattack."
+                    },
+                    {
+                        "title": "Regulatory Compliance",
+                        "description": "Ensuring that your organization meets necessary regulatory and compliance requirements, including PCI DSS, HIPAA, GDPR, and others."
+                    },
+                    {
+                        "title": "Board-Level Reporting",
+                        "description": "Providing clear, high-level reports for senior executives and board members to help them understand your organization’s security posture and make informed decisions about security investments."
+                    }
+                ],
+                "benifits_title": "Key Benefits of vCISO Services",
+                "benifits": [
+                    "Access to top-tier cybersecurity leadership without the cost of a full-time executive.",
+                    "Strategic alignment of your cybersecurity initiatives with your business goals.",
+                    "Improved risk management and response capabilities.",
+                    "Ongoing guidance to enhance your organization’s overall security posture.",
+                    "Compliance with regulatory standards and industry best practices."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "vapt-services",
+        "mainBanner": "assets/images/main-services/vapt.jpg",
+        "header_title": "VAPT Services",
+        "title": "VAPT Services (Vulnerability Assessment & Penetration Testing)",
+        "desc1": "AESPARROW’s VAPT Services combine both vulnerability assessments and penetration testing to provide a comprehensive analysis of your organization’s digital security. Our team of experts uses a variety of tools, techniques, and methodologies to identify and exploit vulnerabilities in systems, applications, and networks, providing actionable insights to safeguard your infrastructure against cyber threats.",
+        "desc2": "AESPARROW’s VAPT (Vulnerability Assessment and Penetration Testing) services deliver a thorough evaluation of your organization’s digital security posture. By integrating both vulnerability assessments and penetration testing, our expert team leverages advanced tools, proven methodologies, and industry best practices to identify and validate security weaknesses across systems, applications, and networks. The result is a detailed, actionable report designed to help you strengthen your defenses and mitigate potential cyber threats effectively.",
+        "whyChoose_title": "Why Choose AESPARROW’s VAPT Services?",
+        "whyChoose": [
+            {
+                "title": "Holistic Security Evaluation",
+                "icons": "assets/images/why_choose/security.png",
+                "description": "Thorough testing across all layers—applications, networks, and systems—to detect and mitigate vulnerabilities."
+            },
+            {
+                "title": "Tailored Solutions",
+                "icons": "assets/images/why_choose/tailored.png",
+                "description": "Custom-designed testing strategies based on your unique business requirements and risk profile."
+            },
+            {
+                "title": "Proven Methodology",
+                "icons": "assets/images/why_choose/methadology.png",
+                "description": "Our approach aligns with industry best practices and standards, including OWASP, NIST, and others."
+            },
+            {
+                "title": "Experienced Team",
+                "icons": "assets/images/why_choose/team.png",
+                "description": "Certified experts in ethical hacking and penetration testing working with the latest tools and techniques to ensure comprehensive coverage."
+            },
+            {
+                "title": "Detailed Reporting",
+                "icons": "assets/images/why_choose/report.png",
+                "description": "Clear, actionable reports that outline vulnerabilities, their risks, and recommended remediation steps, tailored for both technical and executive teams."
+            }
+        ],
+        "children": [
+            {
+                "id": "web-application-testing",
+                "sub_title": "Web Application Testing",
+                "title": "Web Application Testing",
+                "sub_img": "assets/images/sub_service/web.jpg",
+                "desc1": "Web Application Vulnerability Assessment is critical in identifying security flaws in your website or web services that could be exploited by cybercriminals. With the increasing reliance on web-based applications, any vulnerability can pose significant risks to sensitive data and user trust.",
+                "desc2": "",
+                "desc3": "",
+                "what_we_title": "What We Test For",
+                "what_we_test_for": [
+                    {
+                        "title": "SQL Injection",
+                        "description": "Detecting flaws where attackers can inject malicious SQL queries into your web application."
+                    },
+                    {
+                        "title": "Cross-Site Scripting (XSS): ",
+                        "description": "Finding vulnerabilities that allow attackers to inject scripts into web pages viewed by other users."
+                    },
+                    {
+                        "title": "Cross-Site Request Forgery (CSRF)",
+                        "description": "Testing for weaknesses that allow attackers to trick users into performing unintended actions on the application."
+                    },
+                    {
+                        "title": "Authentication Flaws",
+                        "description": "Testing for insecure or weak authentication mechanisms."
+                    },
+                    {
+                        "title": "Broken Access Control",
+                        "description": "Ensuring that users cannot access unauthorized resources."
+                    },
+                    {
+                        "title": "Session Management Issues",
+                        "description": "Identifying flaws in how session tokens are handled, leading to potential session hijacking."
+                    },
+                    {
+                        "title": "Security Misconfigurations",
+                        "description": "Ensuring that the application is configured securely and follows best practices."
+                    }
+                ],
+                "tools_title": "Tools We Use",
+                "tools_we_use": [
+                    "Burp Suite",
+                    "OWASP ZAP",
+                    "Nessus",
+                    "HCL AppScan",
+                    "Acunetix",
+                    "Kali Linux"
+                ],
+                "methadology_title": "Methodology",
+                "methadology": [
+                    "Manual and automated tests to identify common vulnerabilities and security weaknesses.",
+                    "Simulating real-world attacks, like brute force, XSS, and SQL injection, to evaluate the application's defences.",
+                    "A comprehensive report with severity ratings and remediation steps."
+                ]
+            },
+            {
+                "id": "mobile-application-testing",
+                "sub_title": "Mobile Application Testing",
+                "sub_img": "assets/images/sub_service/mobile.webp",
+                "title": "Mobile Application Testing (Android/iOS)",
+                "desc1": "With mobile apps becoming the preferred interface for most businesses, securing them against vulnerabilities is vital. AESPARROW ensures that your mobile applications, whether for Android or iOS, are fully tested for security flaws that could compromise users' sensitive data.",
+                "desc2": "",
+                "desc3": "",
+                "what_we_title": "What We Test For",
+                "what_we_test_for": [
+                    {
+                        "title": "Insecure Data Storage",
+                        "description": "Ensuring sensitive data is stored securely and encrypted on the mobile device."
+                    },
+                    {
+                        "title": "Weak Network Security",
+                        "description": "Testing the security of data in transit, ensuring no data leakage through unencrypted channels."
+                    },
+                    {
+                        "title": "Poor Authentication",
+                        "description": "Checking for insecure or weak authentication mechanisms."
+                    },
+                    {
+                        "title": "Insecure Communication",
+                        "description": "Verifying that communication between the app and the server is encrypted."
+                    },
+                    {
+                        "title": "Improper Session Handling",
+                        "description": "Ensuring proper session management and protection from session hijacking."
+                    },
+                    {
+                        "title": "Code Tampering",
+                        "description": "Assessing whether the app is vulnerable to reverse engineering or code modification."
+                    }
+                ],
+                "tools_title": "Tools We Use",
+                "tools_we_use": [
+                    "MobSF (Mobile Security Framework)",
+                    "Burp Suite",
+                    "Kali Linux",
+                    "Frida",
+                    "Objection",
+                    "Ghidra"
+                ],
+                "methadology_title": "Methodology",
+                "methadology": [
+                    "Static and dynamic analysis of mobile apps.",
+                    "Testing app behaviour in different environments and scenarios.  ",
+                    "Manual testing to uncover flaws not detectable by automated tools."
+                ]
+            },
+            {
+                "id": "api-security-testing",
+                "sub_title": "API Security Testing",
+                "sub_img": "assets/images/sub_service/api_security.png",
+                "title": "API Security Testing",
+                "desc1": "APIs are the backbone of modern applications, enabling communication between different software systems. However, APIs can expose vulnerabilities that attackers can exploit to access sensitive data or perform unauthorized actions.",
+                "desc2": "",
+                "desc3": "",
+                "what_we_title": "What We Test For",
+                "what_we_test_for": [
+                    {
+                        "title": "Injection Attacks",
+                        "description": "Testing for vulnerabilities like SQL injection, command injection, and LDAP injection within the API."
+                    },
+                    {
+                        "title": "Authentication & Authorization",
+                        "description": "Ensuring that access control mechanisms are properly implemented and enforced."
+                    },
+                    {
+                        "title": "Data Exposure",
+                        "description": "Verifying that sensitive data (e.g., passwords, tokens) is properly protected and not exposed via insecure endpoints."
+                    },
+                    {
+                        "title": "Improper Input Validation",
+                        "description": "Identifying flaws where the API does not properly validate input parameters, leading to vulnerabilities."
+                    },
+                    {
+                        "title": "Rate Limiting & DDoS Protection",
+                        "description": "Ensuring that the API can handle excessive traffic without exposing the application to denial-of-service attacks."
+                    },
+                    {
+                        "title": "Broken Object Level Authorization (BOLA): ",
+                        "description": "Ensuring that APIs do not allow unauthorized users to access or manipulate data."
+                    }
+                ],
+                "tools_title": "Tools We Use",
+                "tools_we_use": [
+                    "Postman",
+                    "Burp Suite",
+                    "OWASP ZAP",
+                    "Fiddler",
+                    "Kali Linux"
+                ],
+                "methadology_title": "Methodology",
+                "methadology": [
+                    "Manual testing to ensure endpoints are properly protected.",
+                    "Use of automated tools for scanning APIs and identifying vulnerabilities.",
+                    "Real-world attack simulations to exploit misconfigurations and vulnerabilities."
+                ]
+            },
+            {
+                "id": "Network-and-Server-VAPT",
+                "sub_title": "Network & Server VAPT",
+                "sub_img": "assets/images/sub_service/network.png",
+                "title": "Network & Server VAPT (Internal & External)",
+                "desc1": "Network and server vulnerabilities are prime targets for cybercriminals. Whether it's an internal network breach or an external attack on your web server, AESPARROW provides comprehensive testing to safeguard against these risks.",
+                "desc2": "",
+                "desc3": "",
+                "what_we_title": "What We Test For",
+                "what_we_test_for": [
+                    {
+                        "title": "Open Ports & Misconfigurations",
+                        "description": "Scanning for unnecessary open ports and insecure configurations."
+                    },
+                    {
+                        "title": "Vulnerable Services",
+                        "description": "Identifying outdated software and services with known vulnerabilities (e.g., outdated versions of Apache, SSH)."
+                    },
+                    {
+                        "title": "Privilege Escalation",
+                        "description": "Testing for flaws that allow attackers to gain higher levels of access."
+                    },
+                    {
+                        "title": "Firewall & IDS/IPS Configuration",
+                        "description": "Verifying firewall rules and intrusion detection/prevention systems."
+                    },
+                    {
+                        "title": "Denial of Service (DoS)",
+                        "description": "Simulating DoS and DDoS attacks to test network resilience."
+                    },
+                    {
+                        "title": "Wireless Network Vulnerabilities",
+                        "description": "Assessing the security of internal wireless networks to prevent unauthorized access."
+                    }
+                ],
+                "tools_title": "Tools We Use",
+                "tools_we_use": [
+                    "Nessus",
+                    "OpenVAS",
+                    "Nmap",
+                    "Metasploit",
+                    "Kali Linux"
+                ],
+                "methadology_title": "Methodology",
+                "methadology": [
+                    "External penetration testing to simulate attacks from the internet.",
+                    "Internal testing to evaluate risks from within the corporate network.",
+                    "Comprehensive reporting with remediation advice for network security hardening."
+                ]
+            },
+            {
+                "id": "cloud-security-testing",
+                "sub_title": "Cloud Security Testing",
+                "sub_img": "assets/images/sub_service/cloud_security.jpg",
+                "title": "Cloud Security Testing",
+                "desc1": "As organizations increasingly move to the cloud, securing cloud environments has become a top priority. AESPARROW offers comprehensive cloud security assessments to evaluate your cloud configurations and identify vulnerabilities.",
+                "desc2": "",
+                "desc3": "",
+                "what_we_title": "What We Test For",
+                "what_we_test_for": [
+                    {
+                        "title": "Cloud Misconfigurations",
+                        "description": "Identifying insecure cloud storage, improper access controls, or misconfigured security groups (e.g., AWS, Azure, GCP)."
+                    },
+                    {
+                        "title": "Insecure APIs",
+                        "description": "Ensuring that APIs interacting with cloud services are properly secured."
+                    },
+                    {
+                        "title": "Identity & Access Management (IAM)",
+                        "description": "Assessing cloud identity management to ensure only authorized users have access to resources."
+                    },
+                    {
+                        "title": "Data Encryption & Storage",
+                        "description": "Verifying that sensitive data in the cloud is encrypted both in transit and at rest."
+                    },
+                    {
+                        "title": "Cloud Service Provider Vulnerabilities",
+                        "description": "Assessing potential risks and misconfigurations within the cloud service provider’s own systems and services."
+                    },
+                    {
+                        "title": "Container & Kubernetes Security",
+                        "description": "Reviewing the security of containerized environments and orchestration tools like Kubernetes."
+                    }
+                ],
+                "tools_title": "Tools We Use",
+                "tools_we_use": [
+                    "CloudSploit",
+                    "Nessus",
+                    "Kali Linux",
+                    "AWS Inspector",
+                    "Azure Security Center"
+                ],
+                "methadology_title": "Methodology",
+                "methadology": [
+                    "Cloud configuration assessment for AWS, Azure, Google Cloud, and others.",
+                    "Container security reviews for Docker and Kubernetes environments.",
+                    "Penetration testing to simulate real-world attacks on cloud infrastructures."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "governance-risk-and-compliance",
+        "mainBanner": "assets/images/main-services/grc.webp",
+        "header_title": "GRC Services",
+        "title": "GRC Services (Governance, Risk, and Compliance)",
+        "desc1": "AESPARROW CONSULTING PVT LTD. provides comprehensive Governance, Risk, and Compliance (GRC) services that empower your organization to mitigate risks, ensure regulatory compliance, and establish effective security governance. With an ever-evolving regulatory environment and increasing cybersecurity threats, having a well-structured GRC framework is essential for maintaining resilience and protecting sensitive data.",
+        "desc2": "Our GRC services are designed to help businesses integrate governance practices, manage risks, and comply with industry regulations seamlessly. We work closely with your organization to develop security policies, assess your compliance status, and establish robust procedures to ensure your operations are secure and compliant.",
+        "whyChoose_title": "Why Choose AESPARROW for GRC Services?",
+        "whyChoose": [
+            {
+                "title": "Comprehensive GRC Solutions",
+                "icons": "assets/images/why_choose/comprensive.png",
+                "description": "AESPARROW offers end-to-end services to ensure your organization is governed, secure, and compliant."
+            },
+            {
+                "title": "Experienced Experts",
+                "icons": "assets/images/why_choose/experts.png",
+                "description": "Our team brings years of expertise in governance, risk management, and compliance, backed by industry certifications and a deep understanding of regulatory frameworks."
+            },
+            {
+                "title": "Tailored Strategies",
+                "icons": "assets/images/why_choose/tailored.png",
+                "description": "We understand that every business is different. Our GRC services are customized to your organization’s specific needs, industry regulations, and risk profile."
+            },
+            {
+                "title": "Proactive Risk Mitigation",
+                "icons": "assets/images/why_choose/risk-management.png",
+                "description": "We help you identify, assess, and mitigate risks before they escalate, ensuring that your business is well-prepared for the future."
+            }
+        ],
+        "conclusion": "AESPARROW CONSULTING PVT LTD. is committed to helping organizations navigate the complexities of Governance, Risk, and Compliance (GRC). Our services are designed to ensure that your organization is secure, compliant, and resilient to evolving cyber threats. By partnering with AESPARROW, you gain a trusted advisor who will guide you through the intricacies of cybersecurity governance, risk management, and regulatory compliance.",
+        "children": [
+            {
+                "id": "governance-and-security-policy-design",
+                "sub_title": "Governance & Security Policy Design",
+                "sub_img": "assets/images/sub_service/governence.jpg",
+                "title": "Governance & Security Policy Design",
+                "desc1": "Security policies are the foundation of a strong security posture, providing the necessary framework for safeguarding your organization’s critical assets and ensuring consistency in security practices across the organization. AESPARROW’s Governance & Security Policy Design service helps you create comprehensive policies that are tailored to your organization’s needs and aligned with industry best practices.",
+                "desc2": "",
+                "includes_title": "Our Security Policy Design Service Includes",
+                "includes": [
+                    {
+                        "title": "Custom Policy Creation",
+                        "description": "We work with you to develop customized policies for areas such as data protection, access control, incident response, and security monitoring."
+                    },
+                    {
+                        "title": "Governance Frameworks",
+                        "description": "Establishing clear roles and responsibilities within your organization for managing security practices and ensuring compliance."
+                    },
+                    {
+                        "title": "Risk Management Integration",
+                        "description": "Designing policies that integrate with your risk management processes to proactively address potential threats."
+                    },
+                    {
+                        "title": "Compliance Alignment",
+                        "description": "Ensuring that your policies meet the regulatory and industry standards required for your business, including GDPR, HIPAA, and ISO standards."
+                    },
+                    {
+                        "title": "Employee Awareness",
+                        "description": "Creating security policy documentation that is easy for employees to understand and follow, ensuring consistent adherence to security best practices across your organization."
+                    }
+                ],
+                "benifits_title": "Key Benefits of Governance & Security Policy Design",
+                "benifits": [
+                    "Clear, enforceable security policies that guide your organization’s actions.",
+                    "Improved risk management and response to security incidents.",
+                    "Enhanced regulatory compliance and alignment with industry standards.",
+                    "Increased employee awareness and engagement in security protocols."
+                ]
+            },
+            {
+                "id": "compliance-audits",
+                "sub_title": "Compliance Audits",
+                "sub_img": "assets/images/sub_service/complience.jpg",
+                "title": "Compliance Audits",
+                "desc1": "Compliance is crucial for ensuring that your organization adheres to necessary regulatory requirements and industry standards. AESPARROW’s Compliance Audit Services help you navigate the complex world of compliance and ensure that your business meets the standards required by law and industry regulations.",
+                "desc2": "",
+                "includes_title": "Our Compliance Audit Service Includes",
+                "includes": [
+                    {
+                        "title": "Regulatory Compliance Assessment",
+                        "description": "Reviewing your organization's policies, processes, and systems to ensure compliance with regulations such as GDPR, HIPAA, PCI DSS, ISO 27001, and others."
+                    },
+                    {
+                        "title": "Gap Analysis",
+                        "description": ": Identifying gaps in your compliance framework and providing actionable recommendations to address these gaps."
+                    },
+                    {
+                        "title": "Continuous Monitoring",
+                        "description": "Offering tools and processes for ongoing monitoring and maintenance to ensure your organization remains compliant as regulations evolve."
+                    },
+                    {
+                        "title": "Documentation and Reporting",
+                        "description": "Generating comprehensive compliance reports that detail findings and demonstrate your organization’s commitment to meeting regulatory requirements."
+                    },
+                    {
+                        "title": "Remediation Planning",
+                        "description": "Working with you to implement the necessary changes and controls to ensure ongoing compliance."
+                    }
+                ],
+                "benifits_title": "Key Benefits of Compliance Audits",
+                "benifits": [
+                    "Reduced risk of non-compliance penalties and legal consequences.",
+                    "Clear, actionable insights into areas needing improvement.",
+                    "Alignment with global standards, ensuring security and trust.",
+                    "Ongoing compliance management for sustained regulatory adherence."
+                ]
+            },
+            {
+                "id": "internal-audit-services",
+                "sub_title": "Internal Audit Services",
+                "title": "Internal Audit Services",
+                "sub_img": "assets/images/sub_service/internal_audit.jpg",
+                "desc1": "An internal audit is essential to evaluating the effectiveness of your organization's internal controls, identifying vulnerabilities, and improving processes to safeguard sensitive information. AESPARROW offers Internal Audit Services to help ensure that your organization is prepared for external audits, meet compliance requirements, and proactively strengthen your cybersecurity framework.",
+                "desc2": "",
+                "includes_title": "Our Internal Audit Service Includes",
+                "includes": [
+                    {
+                        "title": "ISO 27001 Readiness",
+                        "description": "Assessing your organization’s preparedness for ISO 27001 certification, focusing on Information Security Management System (ISMS) implementation and continuous improvement."
+                    },
+                    {
+                        "title": "SOC 2 Readiness",
+                        "description": "Preparing your organization for SOC 2 audits by evaluating your controls for data privacy and security, ensuring they meet the Trust Services Criteria."
+                    },
+                    {
+                        "title": "Risk Assessment and Mitigation",
+                        "description": "Identifying potential risks to your systems, networks, and data, and ensuring effective risk mitigation strategies are in place."
+                    },
+                    {
+                        "title": "Policy Review",
+                        "description": "Evaluating the effectiveness of your security policies, identifying areas of improvement, and ensuring that policies are up to date and aligned with industry standards."
+                    },
+                    {
+                        "title": "Operational Efficiency Review",
+                        "description": " Analyzing the effectiveness of your internal security processes and recommending improvements to streamline security operations."
+                    }
+                ],
+                "benifits_title": "Key Benefits of Internal Audit Services",
+                "benifits": [
+                    "Preparation for external certifications and audits.",
+                    "Improved internal controls and risk management processes.",
+                    "Continuous improvement of your organization's security posture.",
+                    "Confidence in your ability to meet regulatory and industry standards."
+                ]
+            },
+            {
+                "id": "cyber-resilience-drills",
+                "sub_title": "Cyber Resilience Drills",
+                "sub_img": "assets/images/sub_service/cyber-resiliences.jpg",
+                "title": "Cyber Resilience Drills",
+                "desc2": "Cyber Resilience is the ability of an organization to respond to and recover from cybersecurity incidents. Cyber Resilience Drills are an essential part of your organization’s incident response and disaster recovery planning. AESPARROW’s Cyber Resilience Drills simulate real-world cybersecurity incidents to test and improve your organization’s readiness and response.",
+                "includes_title": "Our Cyber Resilience Drills Service Includes",
+                "includes": [
+                    {
+                        "title": "Simulated Cyberattack Scenarios",
+                        "description": "Running simulated attack scenarios, such as ransomware attacks, data breaches, or insider threats, to assess your organization’s ability to respond in a real-world situation."
+                    },
+                    {
+                        "title": "Incident Response Evaluation",
+                        "description": "Testing your incident response procedures to ensure that your team is able to detect, respond to, and mitigate threats effectively."
+                    },
+                    {
+                        "title": "Disaster Recovery Testing",
+                        "description": "Ensuring that your business continuity and disaster recovery plans are robust, efficient, and tested to minimize downtime and data loss in case of an attack."
+                    },
+                    {
+                        "title": "Post-Drill Evaluation",
+                        "description": "After the drill, we provide a detailed analysis of your organization’s performance, highlighting strengths and areas for improvement in your cybersecurity response processes."
+                    },
+                    {
+                        "title": "Ongoing Drills and Testing",
+                        "description": "Conducting regular drills to ensure continuous improvement and preparedness for evolving cyber threats."
+                    }
+                ],
+                "benifits_title": "Key Benefits of Cyber Resilience Drills",
+                "benifits": [
+                    "Improved readiness for responding to cybersecurity incidents.",
+                    "Strengthened incident response and recovery capabilities.",
+                    "Identification of gaps in processes and areas for improvement.",
+                    "Enhanced confidence in your organization’s ability to recover from cyberattacks."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "other-services",
+        "mainBanner": "assets/images/main-services/other.jpg",
+        "header_title": "Other Services",
+        "title": "Other Services",
+        "desc1": "At AESPARROW CONSULTING PVT LTD., we offer a wide range of specialized cybersecurity services that complement our core offerings. These services are designed to further enhance your organization's security posture, ensuring that every layer of your infrastructure is fortified against emerging threats. From source code analysis to proactive attack simulations, AESPARROW provides the expertise and solutions necessary to secure your digital environment comprehensively.",
+        "desc2": "",
+        "children": [
+            {
+                "id": "source-code-review",
+                "sub_title": "Source Code Review",
+                "sub_img": "assets/images/sub_service/source-code.webp",
+                "title": "Source Code Review",
+                "desc1": "Source Code Review is a crucial step in identifying vulnerabilities in the code that powers your applications. By thoroughly analysing the source code, AESPARROW helps detect hidden security flaws early in the development process, ensuring that applications are secure before deployment.",
+                "desc2": "",
+                "includes_title": "Our Source Code Review Service Includes",
+                "includes": [
+                    {
+                        "title": "Static Code Analysis",
+                        "description": "Using automated tools to scan your source code for common security issues such as buffer overflows, SQL injection, cross-site scripting (XSS), and other vulnerabilities."
+                    },
+                    {
+                        "title": "Manual Review",
+                        "description": "In-depth manual analysis of the source code to identify complex or business logic vulnerabilities that automated tools might miss."
+                    },
+                    {
+                        "title": "Security Best Practices",
+                        "description": "Ensuring that your code follows industry best practices for security, such as proper input validation, secure authentication methods, and safe data handling."
+                    },
+                    {
+                        "title": "Vulnerability Identification",
+                        "description": "Detecting vulnerabilities that could be exploited by attackers to compromise the security of your application and data."
+                    },
+                    {
+                        "title": "Remediation Guidance",
+                        "description": "Providing clear and actionable recommendations for fixing identified vulnerabilities and improving code security."
+                    },
+                    {
+                        "title": "Post-Review Assistance",
+                        "description": "Helping you implement fixes and re-reviewing the code to ensure vulnerabilities have been properly addressed."
+                    }
+                ],
+                "benifits_title": "Key Benefits of Source Code Review",
+                "benifits": [
+                    "Early detection of security flaws that could compromise the application.",
+                    "Reduced risk of data breaches and system compromises.",
+                    "Improved code quality and adherence to secure coding standards.",
+                    "Compliance with security requirements for applications handling sensitive data."
+                ]
+            },
+            {
+                "id": "devsecops-integration",
+                "sub_title": "DevSecOps Integration",
+                "sub_img": "assets/images/sub_service/devsocops.jpg",
+                "title": "DevSecOps Integration",
+                "desc1": "Integrating security into the DevOps pipeline is a critical practice to ensure that security is built into applications from the start rather than being tacked on at the end. AESPARROW's DevSecOps Integration service focuses on embedding security practices throughout the software development lifecycle (SDLC).",
+                "desc2": "",
+                "includes_title": "Our DevSecOps Integration Service Includes",
+                "includes": [
+                    {
+                        "title": "Security in the CI/CD Pipeline",
+                        "description": "Adding security checks at each stage of the Continuous Integration (CI) and Continuous Deployment (CD) pipeline to detect and prevent security vulnerabilities early in the development process."
+                    },
+                    {
+                        "title": "Automated Security Testing",
+                        "description": "Implementing automated security testing tools to scan for vulnerabilities like SQL injection, cross-site scripting (XSS), and other common threats every time new code is committed."
+                    },
+                    {
+                        "title": "Code Quality and Security Standards",
+                        "description": "Enforcing coding standards that ensure security best practices are followed at every stage of development. This includes integrating tools for static and dynamic analysis."
+                    },
+                    {
+                        "title": "Security Monitoring",
+                        "description": "Implementing security monitoring tools to track and analyse security-related events during the development, testing, and production phases."
+                    },
+                    {
+                        "title": "Compliance Automation",
+                        "description": "Automating the process of compliance checks in the DevOps pipeline, ensuring that security and regulatory requirements are consistently met."
+                    },
+                    {
+                        "title": "Security Training for DevOps Teams",
+                        "description": "Educating developers and DevOps engineers on secure coding practices, threat modeling, and how to incorporate security into the development process."
+                    }
+                ],
+                "benifits_title": "Key Benefits of DevSecOps Integration",
+                "benifits": [
+                    "Continuous detection and remediation of vulnerabilities throughout the SDLC.",
+                    "Faster identification and resolution of security issues in development environments.",
+                    "Enhanced collaboration between security, development, and operations teams.",
+                    "Reduced risk of breaches by shifting security left in the development lifecycle."
+                ]
+            },
+            {
+                "id": "security-awarness-training",
+                "sub_title": "Security Awareness Training",
+                "sub_img": "assets/images/sub_service/security-awarness.jpg",
+                "title": "Security Awareness Training",
+                "desc1": "Security Awareness Training is essential to ensure that your employees understand the role they play in protecting your organization's sensitive information and systems. AESPARROW’s Security Awareness Training programs empower employees to recognize and respond effectively to cybersecurity threats.",
+                "desc2": "",
+                "includes_title": "Our Security Awareness Training Service Includes",
+                "includes": [
+                    {
+                        "title": "Phishing Simulations",
+                        "description": "Conducting simulated phishing campaigns to teach employees how to recognize and avoid phishing emails, a common entry point for cyberattacks."
+                    },
+                    {
+                        "title": "Social Engineering Awareness",
+                        "description": "Educating employees about the various forms of social engineering attacks, such as pretexting, baiting, and tailgating, and how to identify them."
+                    },
+                    {
+                        "title": "Password Management Training",
+                        "description": "Encouraging the use of strong, unique passwords, and the implementation of multi-factor authentication (MFA) to enhance security."
+                    },
+                    {
+                        "title": "Data Protection Best Practices",
+                        "description": ": Teaching employees how to handle sensitive data securely, including how to encrypt, store, and dispose of data safely."
+                    },
+                    {
+                        "title": "Incident Reporting Protocols",
+                        "description": "Ensuring that employees understand how to report potential security incidents and suspicious activities in a timely manner."
+                    },
+                    {
+                        "title": "Cyber Hygiene",
+                        "description": "Promoting basic cybersecurity hygiene practices, such as regular software updates, secure internet usage, and the importance of endpoint security."
+                    },
+                    {
+                        "title": "Role-Specific Training",
+                        "description": "Tailoring the training content to the specific needs and responsibilities of different roles within your organization, ensuring that employees receive relevant, actionable information."
+                    }
+                ],
+                "benifits_title": "Key Benefits of Security Awareness Training",
+                "benifits": [
+                    "Reduced risk of human error leading to security breaches.",
+                    "Empowered employees who understand their role in maintaining security.",
+                    "Enhanced security posture through a more vigilant and educated workforce.",
+                    "Compliance with regulatory requirements for employee security training."
+                ]
+            },
+            {
+                "id": "red-teaming",
+                "sub_title": "Red Teaming",
+                "sub_img": "assets/images/sub_service/red_team.jpg",
+                "title": "Red Teaming",
+                "desc1": "Red Teaming is a form of simulated cyber-attacks where AESPARROW acts as an adversary to test and evaluate your organization’s defenses. Our Red Teaming service simulates real-world attack scenarios to uncover weaknesses in your systems, processes, and people, providing a comprehensive assessment of your security resilience.",
+                "desc2": "",
+                "includes_title": "Our Red Teaming Service Includes",
+                "includes": [
+                    {
+                        "title": "Simulated Attacks",
+                        "description": "Conducting realistic attacks on your systems, networks, and applications to test your security defences, including penetration testing, social engineering, and physical security assessments."
+                    },
+                    {
+                        "title": "Exploitation of Vulnerabilities",
+                        "description": "Identifying and exploiting weaknesses in your security to determine the potential impact of a real-world breach."
+                    },
+                    {
+                        "title": "Advanced Attack Techniques",
+                        "description": "Using sophisticated attack methods such as lateral movement, privilege escalation, and evading detection tools to simulate a real adversary’s tactics."
+                    },
+                    {
+                        "title": "Physical Security Testing",
+                        "description": "Testing the physical security of your premises, including access controls, employee vigilance, and vulnerability to physical breaches."
+                    },
+                    {
+                        "title": "Social Engineering Attacks",
+                        "description": "Testing the human factor by attempting to manipulate employees into revealing sensitive information or granting unauthorized access."
+                    },
+                    {
+                        "title": "Post-Engagement Reporting",
+                        "description": " After the exercise, AESPARROW provides a comprehensive report detailing the vulnerabilities found, how they were exploited, the potential impact of the attack, and recommendations for improving your defences."
+                    },
+                    {
+                        "title": "Remediation and Retesting",
+                        "description": "Following the Red Team exercise, we work with your team to remediate any weaknesses identified, and conduct a retest to ensure that vulnerabilities have been effectively addressed."
+                    }
+                ],
+                "benifits_title": "",
+                "benifits": [
+                    "Realistic assessment of your organization’s defences, including people, processes, and technology.",
+                    "Identification of vulnerabilities that could be exploited in a real-world attack.",
+                    "Improved preparedness for cyber-attacks by identifying gaps in detection, response, and recovery.",
+                    "Enhanced collaboration between security teams and the broader organization to address security weaknesses."
+                ]
+            }
+        ],
+        "whyChoose_title": "Why Choose AESPARROW for Other Services?",
+        "whyChoose": [
+            {
+                "title": "Comprehensive Expertise",
+                "icons": "assets/images/why_choose/expertise.png",
+                "description": "From code review to Red Teaming, AESPARROW offers a broad spectrum of services designed to strengthen every aspect of your cybersecurity strategy."
+            },
+            {
+                "title": "Proactive Threat Identification",
+                "icons": "assets/images/why_choose/threat.png",
+                "description": "Our services are built to identify vulnerabilities before they can be exploited, ensuring your organization is well-prepared for emerging threats."
+            },
+            {
+                "title": "Tailored Solutions",
+                "icons": "assets/images/why_choose/tailored.png",
+                "description": "We customize each service to meet your organization’s unique needs, ensuring effective and relevant security solutions."
+            },
+            {
+                "title": "Ongoing Support",
+                "icons": "assets/images/why_choose/ongoing-support.png",
+                "description": "AESPARROW provides continuous support, from initial assessments to remediation and ongoing monitoring, to ensure your security posture stays strong."
+            }
+        ]
+    }
+]

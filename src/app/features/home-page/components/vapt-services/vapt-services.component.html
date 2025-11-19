@@ -1,0 +1,48 @@
+<section class="theme ">
+    <div class="content py-5">
+        <h2 class="text-center">VAPT & Security Testing Services</h2>
+        <div class="wrapper">
+            <div class="scrollx mt-4">
+                <!-- Touch-friendly scroll buttons -->
+                <button class="touch-scroll-btn left-scroll" (click)="previousSlide()" aria-label="Previous">
+                    <span>&#8249;</span>
+                </button>
+                
+                <ngx-slick-carousel class="carousel" 
+                    #slickModal="slick-carousel"
+                    [config]="slideConfig">
+                    <div class="item" ngxSlickItem *ngFor="let service of services; let i = index" [style.background-image]="'url(assets/images/home/' + service.image + ')'">
+                        <div class="overlay"></div>
+                        <div class="text">
+                            <h4>{{ service.title }}</h4>
+                            <p>{{ service.description }}</p>
+                        </div>
+                    </div>
+                </ngx-slick-carousel>
+                
+                <button class="touch-scroll-btn right-scroll" (click)="nextSlide()" aria-label="Next">
+                    <span>&#8250;</span>
+                </button>
+                
+                <!-- Nth Scroll Navigation -->
+                <div class="nth-navigation">
+                    <button class="nav-btn prev-btn" (click)="previousSlide()" aria-label="Previous">
+                        <span>&lt;</span>
+                    </button>
+                    <div class="numbered-dots">
+                        <button class="dot-btn" 
+                                *ngFor="let service of services; let i = index" 
+                                (click)="goToSlide(i)"
+                                [class.active]="i === 0"
+                                attr.aria-label="Go to slide {{ i + 1 }}">
+                            {{ i + 1 }}
+                        </button>
+                    </div>
+                    <button class="nav-btn next-btn" (click)="nextSlide()" aria-label="Next">
+                        <span>&gt;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

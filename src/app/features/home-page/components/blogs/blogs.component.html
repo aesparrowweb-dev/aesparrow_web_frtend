@@ -1,0 +1,35 @@
+<div class="main-container pt-5">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">Latest Security News & Updates</h2>
+        </div>
+        <div class="row pt-3">
+            <div class="content">
+                <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+                    <div ngxSlickItem class="cards" *ngFor="let item of data">
+                        <div class="border-span">
+                            <div class="blog-img">
+                                <img class="mainimg" [src]="item.img" alt="blog-img">
+                            </div>
+                            <div class=" p-3 content-area">
+                                <h5 class="mb-3">{{item.title}}</h5>
+                                <p class="clamp-2-lines">{{item.description}}</p>
+                                <button  class="btn buttonsd mt-3" (click)="OnClickReadMore(item.id)">Read more</button>
+                            </div>
+                        </div>
+                    </div>
+                </ngx-slick-carousel>
+
+                <div class="buttons">
+                    <div class="slick-prev1" (click)="goToPrevSlide()">
+                        <i class="bi bi-chevron-left fs-2 text-primary"></i>
+                    </div>
+                    <div class="slick-next1" (click)="goToNextSlide()">
+                        <i class="bi bi-chevron-right fs-2 text-primary"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

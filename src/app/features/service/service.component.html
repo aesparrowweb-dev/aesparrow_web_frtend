@@ -1,0 +1,8 @@
+<div class="component-wrapper">
+    <app-service-banner *ngIf="filterdService" [serviceBanner]="filterdService"></app-service-banner>
+    <app-service-desc *ngIf="filterdService" [serviceDesc]="filterdService"></app-service-desc>
+    <app-why-choose *ngIf="filterdService" [servicechoose]="filterdService"></app-why-choose>
+    <app-children-services *ngIf="filterdService" [childrenService]="filterdService" [servicesId]="mainServiceId"></app-children-services>
+    <app-conclusion *ngIf="filterdService" [conclusionService]="filterdService"></app-conclusion>
+    <app-main-services *ngIf="filterdService && mainServiceId" [servicesId]="mainServiceId" [mainService]="serviceData"></app-main-services>
+</div>

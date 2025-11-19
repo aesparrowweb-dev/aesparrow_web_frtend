@@ -1,0 +1,31 @@
+<div class="main-container">
+<section class="life-at pt-5 pb-5">
+    <div class="container">
+        <h2 class="text-center mb-4"><strong>Life at AESPARROW</strong></h2>
+
+        <p class="text-center mb-4">
+            {{ lifeAtAESPARROW.culture }}
+        </p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Our Core Values</h4>
+                <ul class="list-unstyled">
+                    <li *ngFor="let value of lifeAtAESPARROW.values">✔️ {{ value }}</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4>Why You’ll Love Working Here</h4>
+                <ul class="list-unstyled">
+                    <li *ngFor="let benefit of lifeAtAESPARROW.benefits">🌟 {{ benefit }}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <p>{{ lifeAtAESPARROW.callToAction }}</p>
+            <button (click)="onClick()" class="btn buttonsd mt-3">Explore Careers</button>
+        </div>
+    </div>
+</section>
+</div>

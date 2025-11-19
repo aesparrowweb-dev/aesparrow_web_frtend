@@ -1,0 +1,134 @@
+.scroll-section {
+  background: url('^/assets/images/home/hands.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  margin-top: -6px;
+}
+
+.scroll-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.scroll-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.scroll-box {
+  overflow: hidden;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.scroll-text {
+  transition: transform 6s linear;
+}
+
+p {
+  font-size: 18px !important;
+  color: #828FA0 !important
+}
+
+.heading-underline {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.heading-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 3px;
+  width: 100%;
+  background-color: #00BFFF;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: underlineGrow 1s ease forwards;
+}
+
+@keyframes underlineGrow {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+
+h3 {
+  text-align: left;
+}
+
+.checkmark-blue {
+  color: #004AAD !important;
+}
+
+span {
+  color: #828FA0 !important;
+}
+
+strong {
+  color: #ffffff !important
+}
+
+
+.data {
+  text-align: left;
+}
+
+
+.buttonsd {
+  background: transparent;
+  color: #FFFFFF;
+  padding: 8px 20px;
+  border: 2px solid #004AAD;
+  background-color: #004AAD;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease-in-out;
+}
+
+.buttonsd::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #004AAD;
+  top: 100%;
+  left: 0;
+  transition: top 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.buttonsd:hover::before {
+  top: 0;
+}
+
+.buttonsd:hover {
+  color: white;
+  background-color: transparent;
+}
+
+@media (max-width: 991px){
+  .desc{
+    padding-top: 20px;
+  }
+}

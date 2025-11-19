@@ -1,0 +1,14 @@
+<div class="main-container py-5">
+  <h2 class="text-center mb-5">Sub Services</h2>
+  <ngx-slick-carousel *ngIf="carouselReady" class="custom-carousel" [config]="slideConfig">
+    <div ngxSlickItem *ngFor="let slide of filteredServices" class="carousel-card">
+      <div class="card-image" [style.backgroundImage]="'url(' + slide.sub_img + ')'">
+        <div class="card-overlay">
+          <h3>{{ slide.sub_title }}</h3>
+          <p>{{ slide.description }}</p>
+          <button (click)="onClickButton(slide.id)">Read More</button>
+        </div>
+      </div>
+    </div>
+  </ngx-slick-carousel>
+</div>

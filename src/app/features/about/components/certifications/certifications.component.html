@@ -1,0 +1,25 @@
+<div class="main-container">
+    <div class="container pb-5">
+        <h2 class="text-center">Certifications & Partnerships</h2>
+        <div class="row align-items-center pt-5">
+            <div class="col-md-6" data-aos="fade-right">
+                <img src="assets/images/about/choose-us.jpg" alt="ISO 27001 Certification"
+                    class="img-fluid rounded shadow">
+            </div>
+
+            <div class="col-md-6 mt-4 mt-md-0" data-aos="fade-left">
+                <h3>Certifications & Partnerships</h3>
+                <p>
+                    AESPARROW is certified and aligned with globally recognized standards, reinforcing our commitment to
+                    quality, compliance, and continuous improvement in cybersecurity.
+                </p>
+                <ul class="list-group list-group-flush">
+                    <li class="mb-2 d-flex align-items-start" *ngFor="let cert of certifications">
+                        <i class="bi bi-check-circle-fill checkmark-blue me-2"></i>
+                        <span><strong>{{ cert.title }}</strong> - {{ cert.description }}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

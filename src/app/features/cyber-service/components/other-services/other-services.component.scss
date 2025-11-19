@@ -1,0 +1,77 @@
+.custom-carousel {
+    .carousel-card {
+        padding: 10px;
+
+        .card-image {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+
+            .card-overlay {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.6);
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+
+                h3 {
+                    margin: 0 0 10px;
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                }
+
+                button {
+                    background: transparent;
+                    color: #FFFFFF;
+                    padding: 8px 20px;
+                    border: 2px solid #004AAD;
+                    background-color: #004AAD;
+                    border-radius: 5px;
+                    position: relative;
+                    overflow: hidden;
+
+                    &:hover {
+                        background: #000000;
+                        border: 2px solid white !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.main-container {
+    background-color: #0b1e36 !important;
+      overflow-y: hidden; 
+}
+
+
+
+h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #FFFFFF
+}
+
+
+::ng-deep .slick-dots li button:before {
+  color: #FFFFFF !important;
+  opacity: 0.6;
+}
+
+::ng-deep .slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #000000 !important;
+}

@@ -1,0 +1,17 @@
+<div class="main-container pb-5">
+  <div class="container ">
+    <h2 class="text-center mb-5" data-aos="fade-up">Subsections of {{childrenService.title}}</h2>
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-4" *ngFor="let service of childrenService.children; let i = index"
+        data-aos="zoom-in-up" [attr.data-aos-delay]="i * 100">
+
+        <div (click)="onClickServices(service.id)" class="boxes d-flex align-items-start gap-3 border rounded-3 p-3 shadow-sm h-100 hover-effect">
+          <i class="bi bi-shield-lock fs-3 text-primary"></i>
+          <div class="text-box">
+            <h5 class="fw-semibold">{{ service.title }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

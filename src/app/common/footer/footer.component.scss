@@ -1,0 +1,51 @@
+img.logo {
+    height: 70px;
+}
+
+.component-wrapper {
+    background-color: #0b1e36;
+}
+
+h5 {
+    font-size: var(--ic-standard-font-size);
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: var(--ic-accent-font-color1);
+}
+
+
+.tags p {
+    cursor: pointer;
+
+    a:hover {
+        border-bottom: 1px solid #fff;
+    }
+}
+
+.icons img {
+    height: 38px;
+}
+
+.easylinks {
+    a {
+        cursor: pointer;
+
+    }
+
+    a:hover {
+        border-bottom: 1px solid #fff;
+    }
+}
+
+.needhelp {
+    a:hover {
+        border-bottom: 1px solid #fff;
+    }
+}
+
+.white-line {
+    margin: 0 !important
+}

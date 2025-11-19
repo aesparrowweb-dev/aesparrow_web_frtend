@@ -1,0 +1,11 @@
+<div class="cursor-trail-container">
+  <div 
+    *ngFor="let trail of trails; let i = index" 
+    class="trail-dot"
+    [style.left]="trail.x + 'px'"
+    [style.top]="trail.y + 'px'"
+    [style.opacity]="isMouseMoving ? (i + 1) / trails.length : 0"
+    [style.transform]="'scale(' + ((i + 1) / trails.length) + ')'"
+    [style.transition-delay]="trail.delay + 'ms'"
+  ></div>
+</div>

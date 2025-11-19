@@ -1,0 +1,44 @@
+.icon-box {
+    background-color: #004aad !important;
+}
+
+.main-container {
+    background-color: #0b1e36 !important;
+    overflow-y: hidden;
+    color: #fff !important
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #FFFFFF
+}
+
+p {
+    color: #fff !important;
+}
+
+
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: scale(1.03);
+        box-shadow: 0 10px 25px rgba(0, 74, 173, 0.15);
+        background-color: #f9f9f9;
+        color: #000000;
+
+        P {
+            color: #000000 !important;
+        }
+    }
+}
+
+.icon-box {
+    background-color: #004aad !important;
+    transition: background-color 0.3s ease;
+
+    .feature-card:hover & {
+        background-color: #002b7a !important;
+    }
+}

@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+      background-color: #f8f9fc;
+color: #333;
+}
+
+
+h1 {
+  color: #003d8f;
+}
+
+h2 {
+  color: #0066cc;
+}
+
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+a:hover {
+  color: #003d8f;
+  text-decoration: underline;
+}
+
+.btn-primary {
+  background-color: #003d8f;
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0050b3;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+@font-face {
+    font-family: 'proxima-nova';
+    src: url(assets/fonts/fonnts.com-Proxima_Nova_Soft_W03_Regular.ttf);
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url(assets/fonts/Poppins-Bold.ttf);
+}
+
+
+:root {
+    --ic-all-bg: linear-gradient(180deg, rgba(0, 20, 44, 0.8) 36.6%, rgba(0, 20, 44, 1) 95.7%);
+    --ic-primary-font-color: rgba(9, 28, 105, 1);
+    --ic-primary-font-color-shade1: rgba(12, 22, 62, 1);
+    --ic-secondary-font-color: rgba(52, 211, 233, 1);
+    --ic-tertiary-font-color: rgba(255, 128, 12, 1);
+    --ic-tertiary-font-color-shade1: rgba(255, 0, 0, 1);
+    --ic-accent-font-color1: #ffffff;
+    --ic-accent-font-color2: #000000;
+    --ic-normal-font-size: 16px;
+    --ic-standard-font-size: 18px;
+    --ic-small-font-size: 14px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

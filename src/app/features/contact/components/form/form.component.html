@@ -1,0 +1,141 @@
+<div *ngIf="spinner" class="spinner-overlay">
+    <mat-spinner></mat-spinner>
+</div>
+
+
+<div class="main-container">
+    <div class="head-container py-3">
+        <div class="container">
+            <div class="row">
+                <h4>Need help?</h4>
+                <h3>Let’s talk with expertise</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-5 col-xl-5 col-sm-12 col-md-5">
+                <div class="d-flex">
+                    <h5>Call Us </h5>
+                    <div class="contact">
+                        <p class="mb-2">
+                            <a href="tel:+917597705225">
+                               +91 7597705225
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <h5>Mail Us</h5>
+                    <p class="mb-2 email">
+                        <a href="mailto:info@aesparrow.com">
+                            info@aesparrow.com
+                        </a>
+                    </p>
+                </div>
+                <div class="d-flex mb-5">
+                    <h5>Address</h5>
+                    <p class="mb-2 email">
+                         B. 3, S. 3, Near Ridhi Sidhi 8, Old Abadi, Sri Ganganagar, Rajasthan- 335001
+                    </p>
+                </div>
+                <div class="img-wrapper  p-3">
+                    <img class="img-fluid bg-light-blue" src="assets/images/contact-gif.gif" alt="contact-img">
+                </div>
+            </div>
+            <div class="col-lg-7 col-xl-7 col-sm-12 col-md-7 form-container">
+                <div class="form-head text-white p-4 pb-1 d-flex justify-content-between">
+                    <h4>Write to us about your query and we‘ll get back to you within 24 hours</h4>
+                </div>
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form-content">
+                    <div class="form-field">
+                        <div class="form-value">
+                            <input type="text"  formControlName="name" placeholder="Your Name" aria-label="Your Name"
+                                [class.invalid]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" />
+                            <small *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+                                Name is required.
+                            </small>
+                        </div>
+                        <div class="form-value nameData">
+                            <input type="email" formControlName="email" placeholder="Email address"
+                                aria-label="Email address"
+                                [class.invalid]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" />
+                            <small
+                                *ngIf="contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched">
+                                Email is required.
+                            </small>
+                            <small
+                                *ngIf="contactForm.get('email')?.hasError('email') && contactForm.get('email')?.touched">
+                                Please enter a valid email address.
+                            </small>
+                        </div>
+                    </div>
+
+
+                    <div class="form-field">
+                        <div class="form-value">
+                            <select formControlName="service" aria-label="Select a service"
+                                [class.invalid]="contactForm.get('service')?.invalid && contactForm.get('service')?.touched">
+                                <option value="" disabled hidden>Select a service</option>
+                                <option value="Cybersecurity Consulting">Cybersecurity Consulting</option>
+                                <option value="VAPT Services">VAPT Services</option>
+                                <option value="GRC Services">GRC Services</option>
+                                <option value="Compliance Consulting">Compliance Consulting</option>
+                                <option value="Other Services">Other Services</option>
+                            </select>
+
+                            <small *ngIf="contactForm.get('service')?.invalid && contactForm.get('service')?.touched">
+                                Please select a service.
+                            </small>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-fields">
+                        <div class="phone-input-group">
+                            <!-- <select class="form-select country-code" formControlName="countryCode"
+                                (change)="updatePhoneValidation()" aria-label="Select a Country">
+                                  <option value="" disabled hidden>Select a Country</option>
+                                <option *ngFor="let country of countries" [value]="country.code">
+                                    {{ country.name }} ({{ country.code }})
+                                </option>
+                            </select> -->
+
+                             <select class="form-select country-code" formControlName="countryCode" (change)="updatePhoneValidation()" aria-label="Select a Country"
+                                [class.invalid]="contactForm.get('service')?.invalid && contactForm.get('service')?.touched">
+                                <option value="" disabled hidden>Select a Country</option>
+                                <option *ngFor="let country of countries" [value]="country.code">
+                                    {{ country.name }} ({{ country.code }})
+                                </option>
+                            </select>
+
+                            <input type="tel" formControlName="phone" placeholder="Your Phone Number"
+                                (input)="onPhoneInput($event)" [maxlength]="selectedCountry?.digits || 15">
+                        </div>
+
+                        <span class="form-error"
+                            *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.errors">
+                            <span *ngIf="contactForm.get('phone')?.hasError('required')">
+                                Phone Number is required
+                            </span>
+                            <span *ngIf="contactForm.get('phone')?.hasError('pattern')">
+                                Please enter a valid {{ selectedCountry?.name }} phone number ({{
+                                selectedCountry?.digits }} digits)
+                            </span>
+                        </span>
+                    </div>
+
+
+                    <div class="form-value">
+                        <textarea name="message" formControlName="message" id="message" rows="4"
+                            placeholder="Your message here" aria-label="Your message">
+                      </textarea>
+                    </div>
+
+                    <button mat-raised-button class="mt-1">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

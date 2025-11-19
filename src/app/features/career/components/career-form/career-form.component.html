@@ -1,0 +1,171 @@
+<div *ngIf="spinner" class="spinner-overlay">
+    <mat-spinner></mat-spinner>
+</div>
+
+
+<app-career-banner></app-career-banner>
+<div class="main-container py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <h2 class="text-center">Send in your resume and we will get in touch with you</h2>
+                <div class="form-container pt-4">
+                    <form method="POST" [formGroup]="careerForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+                        <div>
+                            <label for="first_name">First Name</label>
+                            <div class="form-content">
+                                <input type="text" name="first_name" placeholder="Rahul" formControlName="first_name">
+                            </div>
+                            <span class="form-error"
+                                *ngIf="careerForm.get('first_name')?.touched && careerForm.get('first_name')?.hasError('required')">
+                                First Name is required
+                            </span>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="last_name">Last Name</label>
+                            <div class="form-content">
+                                <input type="text" name="last_name" placeholder="Kumar" formControlName="last_name">
+                            </div>
+                            <span class="form-error"
+                                *ngIf="careerForm.get('last_name')?.touched && careerForm.get('last_name')?.hasError('required')">
+                                Last Name is required
+                            </span>
+                        </div>
+                        <br>
+<div class="form-margin">
+                        <div class="phone-gg">
+                            <div class="country-select">
+                                <label for="country">Country</label>
+                                <select class="form-select country-code" formControlName="countryCode" (change)="updatePhoneValidation()"
+                                    aria-label="Select a Country"
+                                    [class.invalid]="careerForm.get('service')?.invalid && careerForm.get('service')?.touched">
+                                    <option value="" disabled hidden>Select a Country</option>
+                                    <option *ngFor="let country of countries" [value]="country.code">
+                                        {{ country.name }} ({{ country.code }})
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="phone-input">
+                                <label for="phone">Phone Number</label>
+                                <div class="form-content">
+                                    <input type="tel" name="phone" minlength="10" maxlength="10"
+                                        placeholder="XXXXXXXXXX" formControlName="phone">
+                                </div>
+                              
+                            </div>
+                        </div>
+  <span class="form-error"
+                                    *ngIf="careerForm.get('phone')?.touched && careerForm.get('phone')?.hasError('required')">
+                                    Phone Number is required
+                                </span>
+                                </div>
+                            
+                        <br>
+                        <div class="form-margin">
+                            <label for="email">Email</label>
+                            <div class="form-content">
+                                <input type="email" name="email" placeholder="rahul.kumar@gmail.com"
+                                    formControlName="email">
+                            </div>
+                            <span class="form-error"
+                                *ngIf="careerForm.get('email')?.touched && careerForm.get('email')?.hasError('required')">
+                                Email is required
+                            </span>
+                            <span class="form-error" *ngIf="careerForm.get('email')?.hasError('email')">
+                                Please enter a valid email.
+                            </span>
+                        </div>
+                        <br>
+                        <div class="form-margin">
+                            <label for="address">Address</label>
+                            <div class="form-content">
+                                <input type="text" name="address" placeholder="Address" formControlName="address">
+                            </div>
+                            <span class="form-error"
+                                *ngIf="careerForm.get('address')?.touched && careerForm.get('address')?.hasError('required')">
+                                Address is required
+                            </span>
+                        </div>
+
+                        <br>
+                        <div class="form-margin">
+                            <label for="course_value">Highest qualification</label>
+                            <div class="form-content">
+                                <label for="course_value"></label>
+                                <select name="course_value" id="" formControlName="course_value">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="BCom">B.Com</option>
+                                    <option value="MBA">MBA</option>
+                                    <option value="MSc">M.Sc</option>
+                                    <option value="MCA">MCA</option>
+                                </select>
+                            </div>
+                            <span class="form-error"
+                                *ngIf="careerForm.get('course_value')?.touched && careerForm.get('course_value')?.hasError('required')">
+                                Highest Qualifications is required
+                            </span>
+                        </div>
+                        <br>
+                        <div class="form-margin">
+                            <label for="experience">Years of Experience</label>
+                            <div class="form-content">
+                                <input type="text" name="experience" placeholder="5" formControlName="experience">
+                            </div>
+
+                            <span class="form-error"
+                                *ngIf="careerForm.get('experience')?.touched && careerForm.get('experience')?.hasError('required')">
+                                Experience is required
+                            </span>
+                        </div>
+<br>
+
+                        <div class="form-margin">
+                            <label for="country">Country</label>
+                            <div class="form-content">
+                                <input type="text" name="country" placeholder="India" formControlName="country">
+                            </div>
+
+                            <span class="form-error"
+                                *ngIf="careerForm.get('country')?.touched && careerForm.get('country')?.hasError('required')">
+                                Country is required
+                            </span>
+                        </div>
+<br>
+
+                        <div class="form-margin">
+                            <label for="pincode">Pincode</label>
+                            <div class="form-content">
+                                <input type="text" name="pincode" placeholder="560001" formControlName="pincode">
+                           
+                            </div>
+
+                            <span class="form-error"
+                                *ngIf="careerForm.get('pincode')?.touched && careerForm.get('pincode')?.hasError('required')">
+                                Pincode is required
+                            </span>
+                        </div>
+                        <br>
+                        <div class="form-margin">
+                            <label for="file">Resume</label>
+                            <div class="form-content upload-container">
+                                <input id="file" type="file" (change)="onFileChange($event)" class="file-input"
+                                    name="file" />
+                            </div>
+                            <span class="form-error"
+                                *ngIf="careerForm.get('file')?.touched && careerForm.get('file')?.hasError('required')">
+                                File is required
+                            </span>
+                        </div>
+                        <br>
+                        <div class="sendButton">
+                            <button class="btn buttonsd mt-3">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

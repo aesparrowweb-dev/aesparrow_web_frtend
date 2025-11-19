@@ -1,0 +1,15 @@
+<div class="main" *ngIf="serviceBanner" [ngStyle]="{'background-image': 'url('+ serviceBanner.mainBanner + ')'}">
+    <div class="overlay"></div>
+    <div class="row">
+        <div class="breadcrumbs">
+            <ul>
+                <li class="px-1"><a href="/home">Home &nbsp;/</a></li>
+                <li class="px-1"><a>Services &nbsp;/</a></li>
+                <li class="px-1">{{serviceBanner.title}}</li>
+            </ul>
+        </div>
+        <div class="content py-5">
+            <h1>{{serviceBanner.title}}</h1>
+        </div>
+    </div>
+</div>

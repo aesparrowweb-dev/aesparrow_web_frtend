@@ -1,0 +1,38 @@
+.benefits-list {
+  .list-group-item {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #0b1e36;
+      color: #fff;
+
+      .badge {
+        background-color: #fff;
+        color: #0b1e36;
+      }
+    }
+  }
+
+  .badge {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 50px;
+  }
+}
+
+
+.main-container {
+    background-color: #0b1e36 !important;
+      overflow-y: hidden; 
+}
+
+
+h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #FFFFFF
+}

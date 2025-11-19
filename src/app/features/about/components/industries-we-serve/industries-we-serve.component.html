@@ -1,0 +1,30 @@
+<div class="main-container">
+
+    <div class="container pb-5">
+        <h2 class="text-center mb-4">Our Clients</h2>
+        <p class="text-center mb-5">
+            We proudly serve a wide range of clients, from startups and SMBs to large enterprises and government
+            agencies.
+            AESPARROW is trusted across critical sectors for securing sensitive data, maintaining compliance, and
+            enabling digital growth.
+        </p>
+
+        <h3 class="text-center pb-4">Industries We Serve</h3>
+
+        <div class="row g-4">
+            <div class="col-md-4" *ngFor="let industry of industries">
+                <div class="card h-100 shadow border-0 card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="img-sec">
+                        <img [src]="industry.image" class="card-img-top zoom-in" alt="{{ industry.title }}">
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title text-center">{{ industry.title }}</h5>
+                        <p class="card-text text-center">{{ industry.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

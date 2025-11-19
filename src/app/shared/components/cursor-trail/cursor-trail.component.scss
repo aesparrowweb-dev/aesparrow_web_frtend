@@ -1,0 +1,67 @@
+.cursor-trail-container {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.trail-dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: radial-gradient(circle, rgba(70, 130, 180, 0.6) 0%, rgba(135, 206, 235, 0.3) 40%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              left 0.1s linear,
+              top 0.1s linear;
+  mix-blend-mode: screen;
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+}
+
+// Blue and cloudy white trail effect
+.trail-dot:nth-child(1) { background: radial-gradient(circle, rgba(70, 130, 180, 0.7) 0%, rgba(135, 206, 235, 0.3) 40%, transparent 70%); }
+.trail-dot:nth-child(2) { background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(220, 220, 220, 0.3) 40%, transparent 70%); }
+.trail-dot:nth-child(3) { background: radial-gradient(circle, rgba(100, 149, 237, 0.7) 0%, rgba(176, 224, 230, 0.3) 40%, transparent 70%); }
+.trail-dot:nth-child(4) { background: radial-gradient(circle, rgba(240, 248, 255, 0.6) 0%, rgba(230, 230, 250, 0.3) 40%, transparent 70%); }
+.trail-dot:nth-child(5) { background: radial-gradient(circle, rgba(65, 105, 225, 0.7) 0%, rgba(135, 206, 250, 0.3) 40%, transparent 70%); }
+.trail-dot:nth-child(6) { background: radial-gradient(circle, rgba(248, 248, 255, 0.6) 0%, rgba(245, 245, 245, 0.3) 40%, transparent 70%); }
+.trail-dot:nth-child(7) { background: radial-gradient(circle, rgba(30, 144, 255, 0.7) 0%, rgba(173, 216, 230, 0.3) 40%, transparent 70%); }
+.trail-dot:nth-child(8) { background: radial-gradient(circle, rgba(250, 250, 250, 0.6) 0%, rgba(240, 240, 240, 0.3) 40%, transparent 70%); }
+.trail-dot:nth-child(9) { background: radial-gradient(circle, rgba(0, 191, 255, 0.7) 0%, rgba(175, 238, 238, 0.3) 40%, transparent 70%); }
+.trail-dot:nth-child(10) { background: radial-gradient(circle, rgba(70, 130, 180, 0.7) 0%, rgba(135, 206, 235, 0.3) 40%, transparent 70%); }
+.trail-dot:nth-child(11) { background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(220, 220, 220, 0.3) 40%, transparent 70%); }
+.trail-dot:nth-child(12) { background: radial-gradient(circle, rgba(100, 149, 237, 0.7) 0%, rgba(176, 224, 230, 0.3) 40%, transparent 70%); }
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+  .trail-dot {
+    background: radial-gradient(circle, rgba(135, 206, 250, 0.8) 0%, rgba(70, 130, 180, 0.4) 40%, transparent 70%);
+  }
+  
+  .trail-dot:nth-child(1) { background: radial-gradient(circle, rgba(173, 216, 230, 0.8) 0%, rgba(100, 149, 237, 0.4) 40%, transparent 70%); }
+  .trail-dot:nth-child(2) { background: radial-gradient(circle, rgba(240, 248, 255, 0.7) 0%, rgba(176, 224, 230, 0.3) 40%, transparent 70%); }
+  .trail-dot:nth-child(3) { background: radial-gradient(circle, rgba(135, 206, 235, 0.8) 0%, rgba(65, 105, 225, 0.4) 40%, transparent 70%); }
+  .trail-dot:nth-child(4) { background: radial-gradient(circle, rgba(250, 250, 250, 0.6) 0%, rgba(220, 220, 220, 0.3) 40%, transparent 70%); }
+  .trail-dot:nth-child(5) { background: radial-gradient(circle, rgba(30, 144, 255, 0.8) 0%, rgba(70, 130, 180, 0.4) 40%, transparent 70%); }
+  .trail-dot:nth-child(6) { background: radial-gradient(circle, rgba(248, 248, 255, 0.7) 0%, rgba(230, 230, 250, 0.3) 40%, transparent 70%); }
+  .trail-dot:nth-child(7) { background: radial-gradient(circle, rgba(100, 149, 237, 0.8) 0%, rgba(0, 191, 255, 0.4) 40%, transparent 70%); }
+  .trail-dot:nth-child(8) { background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(245, 245, 245, 0.3) 40%, transparent 70%); }
+  .trail-dot:nth-child(9) { background: radial-gradient(circle, rgba(176, 224, 230, 0.8) 0%, rgba(135, 206, 235, 0.4) 40%, transparent 70%); }
+  .trail-dot:nth-child(10) { background: radial-gradient(circle, rgba(173, 216, 230, 0.8) 0%, rgba(100, 149, 237, 0.4) 40%, transparent 70%); }
+  .trail-dot:nth-child(11) { background: radial-gradient(circle, rgba(240, 248, 255, 0.7) 0%, rgba(176, 224, 230, 0.3) 40%, transparent 70%); }
+  .trail-dot:nth-child(12) { background: radial-gradient(circle, rgba(135, 206, 235, 0.8) 0%, rgba(65, 105, 225, 0.4) 40%, transparent 70%); }
+}
+
+// Reduce motion for users who prefer it
+@media (prefers-reduced-motion: reduce) {
+  .trail-dot {
+    transition: none;
+  }
+}

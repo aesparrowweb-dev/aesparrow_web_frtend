@@ -1,0 +1,15 @@
+<div class="main" [style.backgroundImage]="'url(' + aboutData?.banner_image + ')'">
+  <div class="row">
+    <div class="overlay"></div>
+    <div class="breadcrumbs">
+      <ul>
+        <li class="px-1"><a href="/home">Home &nbsp;/</a></li>
+        <li class="px-1">{{ aboutData?.title || 'About Us' }}</li>
+      </ul>
+    </div>
+    <div class="content py-5">
+      <h1>{{ aboutData?.title || 'About Us' }}</h1>
+      <p *ngIf="aboutData?.description">{{ aboutData.description }}</p>
+    </div>
+  </div>
+</div>

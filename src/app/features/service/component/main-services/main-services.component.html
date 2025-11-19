@@ -1,0 +1,18 @@
+<div class="main-container pb-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Other Services</h2>
+        <div class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-4" *ngFor="let service of filteredServices" data-aos="fade-up">
+                <div class="border rounded overflow-hidden shadow-sm" (click)="onClickServices(service.id)">
+                    <div class="img-wrapper border-bottom">
+                        <img [src]="service.mainBanner" class="img-fluid object-fit-cover"
+                            alt="{{ service.header_title }}">
+                    </div>
+                    <div class="text-center py-3 datas">
+                        <h5 class="fw-semibold mb-0">{{ service.header_title }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

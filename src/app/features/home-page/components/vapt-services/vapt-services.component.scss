@@ -1,0 +1,360 @@
+.wrapper {
+    overflow-y: hidden;
+     overflow-x: hidden;
+    padding: 20px 0;
+    margin: 0 0 0 2%;
+}
+
+.theme {
+    background-color: #0b1e36 !important;
+   
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #FFFFFF
+}
+
+
+.scrollx {
+    display: flex;
+
+    .col {
+        p {
+            font-size: .8em;
+        }
+    }
+}
+
+
+.content {
+    width: 95%;
+    max-width: 100%px;
+    margin: auto;
+}
+
+.scrollx {
+    position: relative;
+}
+
+.carousel {
+    width: 100%;
+}
+
+/* Touch-friendly scroll buttons */
+.touch-scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--yellow) !important;
+    border: 3px solid #fff !important;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 24px;
+    color: #ffffff;
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(193, 238, 248, 0.8) !important;
+    opacity: 1 !important;
+    visibility: visible;
+}
+
+.touch-scroll-btn:hover {
+    background: #fff;
+    transform: translateY(-50%) scale(1.1);
+    opacity: 1;
+}
+
+.touch-scroll-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.left-scroll {
+    left: 20px;
+}
+
+.right-scroll {
+    right: 20px;
+}
+
+.item {
+    position: relative;
+    min-width: 290px;
+    height: 351px;
+    margin: 20px 10px;
+    padding: 20px;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(113, 147, 175, 0.536);
+    z-index: 10;
+}
+
+.item:hover .overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.item:hover .text h4 {
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.item:hover .text p {
+    transform: translateY(-3px);
+}
+
+/* Overlay */
+.item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    /* Black-blue overlay */
+    border-radius: 15px;
+    z-index: 1;
+}
+
+/* Content layer */
+.item .text {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Heading on top */
+.item .text h4 {
+    align-self: center;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: auto;
+    color: var(--ic-tertiary-font-color);
+    margin-top: 20%;
+    /* Yellow or your theme color */
+    transition: all 0.3s ease;
+}
+
+/* Description center aligned */
+.item .text p {
+    font-size: 14px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 14%;
+    transition: all 0.3s ease;
+}
+
+.item {
+    h4 {
+        color: var(--yellow);
+        font-size: var(--button-font);
+    }
+}
+
+/* Nth Navigation Styles */
+.nth-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.nav-btn {
+    background: var(--yellow);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+}
+
+.nav-btn:hover {
+    background: #fff;
+    transform: scale(1.1);
+}
+
+.numbered-dots {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+}
+
+.dot-btn {
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid var(--yellow);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.dot-btn:hover {
+    background: var(--yellow);
+    color: #000;
+    transform: scale(1.1);
+}
+
+.dot-btn.active {
+    background: var(--yellow);
+    color: #000;
+    transform: scale(1.15);
+}
+
+/* Slick carousel customizations */
+.slick-dots {
+    display: none !important; /* Hide default dots */
+}
+
+.slick-prev, 
+.slick-next {
+    display: none !important; /* Hide default arrows */
+}
+
+.slick-prev:before, 
+.slick-next:before {
+    color: var(--yellow);
+    font-size: 24px;
+}
+
+.slick-prev {
+    left: -25px;
+    z-index: 1000;
+}
+
+.slick-next {
+    right: -25px;
+    z-index: 1000;
+}
+
+@media (max-width: 990px) {
+    h1 {
+        font-size: var(--responsive-font);
+        padding-bottom: 0;
+    }
+
+    .para {
+        width: 95%;
+    }
+
+    .item {
+        height: 300px;
+        width: 250px;
+    }
+
+    .slick-prev {
+        left: 10px;
+    }
+
+    .slick-next {
+        right: 10px;
+    }
+
+    .nth-navigation {
+        margin-top: 15px;
+        gap: 10px;
+    }
+
+    .nav-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .dot-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 11px;
+    }
+
+    .numbered-dots {
+        max-width: 400px;
+        gap: 6px;
+    }
+
+    .touch-scroll-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .left-scroll {
+        left: 5px;
+    }
+
+    .right-scroll {
+        right: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .numbered-dots {
+        max-width: 300px;
+        gap: 4px;
+    }
+
+    .dot-btn {
+        width: 24px;
+        height: 24px;
+        font-size: 10px;
+    }
+
+    .nav-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .touch-scroll-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .left-scroll {
+        left: 2px;
+    }
+
+    .right-scroll {
+        right: 2px;
+    }
+}

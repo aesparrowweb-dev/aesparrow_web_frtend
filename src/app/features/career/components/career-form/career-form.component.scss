@@ -20,7 +20,11 @@ span {
   border-radius: 10px;
   background-color: #fff;
   margin-top: 5px;
+  
 }
+
+
+  
 
 label {
   color: #FFFFFF;
@@ -39,16 +43,28 @@ input {
   background-color: #FFFFFF;
 }
 
+.form-margin{
+  
+  
+  background-color: #000000;
+  
+  
+}
 .phone-gg {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   align-items: flex-end;
-  margin-top: 0rem;
+  margin-top: 5px;
+  
+  
+  
+  
 
   .country-select {
     flex: 0 0 20%;
     min-width: 100px;
+
 
     label {
       display: block;
@@ -62,6 +78,7 @@ input {
       font-size: 1rem;
       border: 1px solid #ccc;
       border-radius: 8px;
+      height: 42px;
     }
   }
 
@@ -118,6 +135,7 @@ select {
   font-size: 0.85rem;
   margin-top: 5px;
 }
+
 
 .spinner-overlay {
   position: fixed;

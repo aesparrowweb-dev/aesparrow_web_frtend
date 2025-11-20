@@ -3,155 +3,46 @@
         <h2 class="text-center">VAPT & Security Testing Services</h2>
         <div class="wrapper">
             <div class="scrollx mt-4">
-                 <div class="scrollx-inner d-flex">
-                <div class="item">
-                      <div class="overlay"></div>
-                    <div class="text">
-                        <h4>Web Application Security Testing </h4>
-                        <p>Identifies vulnerabilities in web applications, such as injection flaws, broken
-                            authentication, and cross-site scripting (XSS), based on OWASP Top 10.
-                            Ensures secure development and deployment of your web platforms.</p>
+                <!-- Touch-friendly scroll buttons -->
+                <button class="touch-scroll-btn left-scroll" (click)="previousSlide()" aria-label="Previous">
+                    <span>&#8249;</span>
+                </button>
+                
+                <ngx-slick-carousel class="carousel" 
+                    #slickModal="slick-carousel"
+                    [config]="slideConfig">
+                    <div class="item" ngxSlickItem *ngFor="let service of services; let i = index" [style.background-image]="'url(assets/images/home/' + service.image + ')'">
+                        <div class="overlay"></div>
+                        <div class="text">
+                            <h4>{{ service.title }}</h4>
+                            <p>{{ service.description }}</p>
+                        </div>
                     </div>
-                </div>
-                <div class="item">
-                      <div class="overlay"></div>
-                    <div class="text">
-                        <h4>Mobile Application Security Testing</h4>
-                        <p>Tests Android and iOS apps for issues like insecure storage, poor encryption, and improper
-                            platform usage.
-                            Helps secure sensitive user data and maintain app integrity across devices.
-                        </p>
+                </ngx-slick-carousel>
+                
+                <button class="touch-scroll-btn right-scroll" (click)="nextSlide()" aria-label="Next">
+                    <span>&#8250;</span>
+                </button>
+                
+                <!-- Nth Scroll Navigation -->
+                <div class="nth-navigation">
+                    <button class="nav-btn prev-btn" (click)="previousSlide()" aria-label="Previous">
+                        <span>&lt;</span>
+                    </button>
+                    <div class="numbered-dots">
+                        <button class="dot-btn" 
+                                *ngFor="let service of services; let i = index" 
+                                (click)="goToSlide(i)"
+                                [class.active]="i === 0"
+                                attr.aria-label="Go to slide {{ i + 1 }}">
+                            {{ i + 1 }}
+                        </button>
                     </div>
+                    <button class="nav-btn next-btn" (click)="nextSlide()" aria-label="Next">
+                        <span>&gt;</span>
+                    </button>
                 </div>
-                <div class="item">
-                      <div class="overlay"></div>
-                    <div class="text">
-                        <h4>Network Security Testing</h4>
-                        <p>Assesses internal and external networks to uncover misconfigurations, open ports, and weak
-                            protocols.
-                            Simulates real-world attacks to evaluate how secure your network really is.
-                        </p>
-
-                    </div>
-                </div>
-                <div class="item">
-                      <div class="overlay"></div>
-                    <div class="text">
-                        <h4>Server & Infrastructure Testing</h4>
-                        <p>Focuses on identifying weaknesses in servers, databases, firewalls, and routers.
-                            Helps harden critical infrastructure against unauthorized access and potential breaches.
-                        </p>
-
-                    </div>
-                </div>
-                <div class="item">
-                      <div class="overlay"></div>
-                    <div class="text">
-                        <h4>Cloud Security Assessment</h4>
-                        <p>Evaluates your cloud environment (AWS, Azure, GCP) for configuration issues, identity/access
-                            flaws, and data exposure.
-                            Ensures security posture aligns with cloud best practices and compliance standards.
-                        </p>
-                    </div>
-                </div>
-                <div class="item">
-                      <div class="overlay"></div>
-                    <div class="text">
-                        <h4>Wireless Network Penetration Testing</h4>
-                        <p>Tests Wi-Fi and wireless infrastructure for vulnerabilities like weak encryption, rogue
-                            access points, and signal leakage.
-                            Protects your organization from unauthorized wireless access
-                        </p>
-
-                    </div>
-                </div>
-                <div class="item">
-                      <div class="overlay"></div>
-                    <div class="text">
-                        <h4>API Security Testing</h4>
-                        <p>Examines REST and SOAP APIs for authentication flaws, data leaks, and broken object-level
-                            authorization.
-                            Critical for securing integrations between your apps, services, and third parties.
-                        </p>
-
-                    </div>
-                </div>
-                <div class="item">
-                      <div class="overlay"></div>
-                    <div class="text">
-                        <h4>Source Code Review (Secure Code Audit)</h4>
-                        <p>Performs manual and automated reviews of application source code to identify insecure coding
-                            practices.
-                            Helps developers fix vulnerabilities before deployment.
-                        </p>
-                    </div>
-                </div>
-                <div class="item">
-                      <div class="overlay"></div>
-                    <div class="text">
-                        <h4>Social Engineering & Phishing Simulation</h4>
-                        <p>Tests employee awareness and response to simulated phishing, impersonation, and other
-                            human-targeted attacks.
-                            Highlights security culture gaps and strengthens internal training programs.
-
-                        </p>
-                    </div>
-                </div>
-                <div class="item">
-                      <div class="overlay"></div>
-                    <div class="text">
-                        <h4>IoT & Embedded Device Security Testing</h4>
-                        <p>Analyzes firmware, protocols, and hardware of IoT devices for security flaws.
-                            Vital for connected environments like smart factories, healthcare devices, or home
-                            automation.
-
-                        </p>
-                    </div>
-                </div>
-                <div class="item">
-                      <div class="overlay"></div>
-                    <div class="text">
-                        <h4>Red Team Assessment</h4>
-                        <p>A full-scope simulated cyberattack that tests your organization’s detection, response, and
-                            resilience.
-                            Goes beyond technical flaws to assess physical, social, and procedural weaknesses.
-
-                        </p>
-                    </div>
-                </div>
-                <div class="item">
-                      <div class="overlay"></div>
-                    <div class="text">
-                        <h4>Black Box Testing</h4>
-                        <p>Simulates an attack with no prior knowledge of the internal systems—just like an external
-                            hacker.
-                            Useful for understanding how exposed your organization is to outside threats.
-                        </p>
-                    </div>
-                </div>
-                <div class="item">
-                      <div class="overlay"></div>
-                    <div class="text">
-                        <h4>White Box Testing</h4>
-                        <p>Performed with full knowledge of the system architecture, source code, and credentials.
-                            Ensures a deep, comprehensive evaluation of system weaknesses
-
-                        </p>
-                    </div>
-                </div>
-                <div class="item">
-                      <div class="overlay"></div>
-                    <div class="text">
-                        <h4>Grey Box Testing</h4>
-                        <p>Combines elements of both white and black box testing to simulate an insider threat or a
-                            semi-privileged attacker.
-                            Balances depth and realism in vulnerability discovery.
-                        </p>
-                    </div>
-                </div>
-            </div>
             </div>
         </div>
-
     </div>
 </section>

@@ -33,7 +33,7 @@
                             </span>
                         </div>
                         <br>
-
+<div class="form-margin">
                         <div class="phone-gg">
                             <div class="country-select">
                                 <label for="country">Country</label>
@@ -53,15 +53,17 @@
                                     <input type="tel" name="phone" minlength="10" maxlength="10"
                                         placeholder="XXXXXXXXXX" formControlName="phone">
                                 </div>
-                                <span class="form-error"
+                              
+                            </div>
+                        </div>
+  <span class="form-error"
                                     *ngIf="careerForm.get('phone')?.touched && careerForm.get('phone')?.hasError('required')">
                                     Phone Number is required
                                 </span>
-                            </div>
-                        </div>
-
+                                </div>
+                            
                         <br>
-                        <div>
+                        <div class="form-margin">
                             <label for="email">Email</label>
                             <div class="form-content">
                                 <input type="email" name="email" placeholder="rahul.kumar@gmail.com"
@@ -76,7 +78,7 @@
                             </span>
                         </div>
                         <br>
-                        <div>
+                        <div class="form-margin">
                             <label for="address">Address</label>
                             <div class="form-content">
                                 <input type="text" name="address" placeholder="Address" formControlName="address">
@@ -88,7 +90,7 @@
                         </div>
 
                         <br>
-                        <div>
+                        <div class="form-margin">
                             <label for="course_value">Highest qualification</label>
                             <div class="form-content">
                                 <label for="course_value"></label>
@@ -106,7 +108,7 @@
                             </span>
                         </div>
                         <br>
-                        <div>
+                        <div class="form-margin">
                             <label for="experience">Years of Experience</label>
                             <div class="form-content">
                                 <input type="text" name="experience" placeholder="5" formControlName="experience">
@@ -117,9 +119,9 @@
                                 Experience is required
                             </span>
                         </div>
+<br>
 
-
-                        <div>
+                        <div class="form-margin">
                             <label for="country">Country</label>
                             <div class="form-content">
                                 <input type="text" name="country" placeholder="India" formControlName="country">
@@ -130,12 +132,13 @@
                                 Country is required
                             </span>
                         </div>
+<br>
 
-
-                        <div>
+                        <div class="form-margin">
                             <label for="pincode">Pincode</label>
                             <div class="form-content">
                                 <input type="text" name="pincode" placeholder="560001" formControlName="pincode">
+                           
                             </div>
 
                             <span class="form-error"
@@ -144,7 +147,7 @@
                             </span>
                         </div>
                         <br>
-                        <div class="">
+                        <div class="form-margin">
                             <label for="file">Resume</label>
                             <div class="form-content upload-container">
                                 <input id="file" type="file" (change)="onFileChange($event)" class="file-input"

@@ -2,7 +2,7 @@ header {
     position: sticky;
     top: 0px;
     width: 100%;
-    z-index: 999;
+    z-index: 1001;
 }
 
 :host ::ng-deep .p-autocomplete .p-autocomplete-panel {
@@ -184,7 +184,8 @@ app-header-subnav {
     header {
         top: 0px;
         width: 100%;
-        z-index: 3;
+        z-index: 1001;
+        background: #000 !important;
     }
 
     .res {
@@ -238,8 +239,7 @@ app-header-subnav {
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 3;
-        background: #000000;
+        z-index: 1001;
         height: 70px;
         padding-top: 0px;
     }

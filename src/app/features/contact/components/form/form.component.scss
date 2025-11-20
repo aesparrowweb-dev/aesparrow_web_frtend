@@ -33,7 +33,7 @@ p {
 }
 
 .form-container {
-    margin-top: -10%;
+    margin-top: auto;
 }
 
 .form-head {
@@ -113,7 +113,12 @@ button {
 }
 
 
-
+.form-error {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
 .spinner-overlay {
     position: fixed;
     top: 0;

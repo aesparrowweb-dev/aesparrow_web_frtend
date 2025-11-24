@@ -23,16 +23,33 @@ export class HeaderComponent {
   searchDataLoaded = false;
 
   constructor(
-    private responsiveService: ResponsiveService,
+    public responsiveService: ResponsiveService,
     private sideNavService: SidenavService,
     private router: Router,
     private http: HttpClient
   ) { }
 
+  private mobileBreakpoint = 992; // Common breakpoint for mobile/desktop
+
   ngOnInit() {
     AOS.init();
     this.loadAllService();
     this.loadAllSerachData();
+    
+    // Add window resize listener to handle viewport changes
+    window.addEventListener('resize', this.checkViewportSize.bind(this));
+  }
+
+  ngOnDestroy() {
+    // Clean up the event listener when component is destroyed
+    window.removeEventListener('resize', this.checkViewportSize.bind(this));
+  }
+  
+  private checkViewportSize() {
+    // Close the mobile menu if viewport is desktop size and menu is open
+    if (window.innerWidth >= this.mobileBreakpoint && this.responsiveService.isResponsiveOpen.value) {
+      this.responsiveService.closeResponsive();
+    }
   }
 
   loadAllService() {
@@ -85,6 +102,14 @@ export class HeaderComponent {
     this.showSearch = !this.showSearch;
     this.searchQuery = '';
     this.filteredResults = [];
+  }
+
+  toggleResponsiveMenu() {
+    if (this.responsiveService.isResponsiveOpen.value) {
+      this.responsiveService.closeResponsive();
+    } else {
+      this.responsiveService.openResponsive();
+    }
   }
 
   onSearchChange(): void {

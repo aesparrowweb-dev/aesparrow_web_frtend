@@ -1,14 +1,25 @@
-<div class="main">
-    <div class="row">
-        <div class="overlay"></div>
-        <div class="breadcrumbs">
-            <ul>
-                <li class="px-1"><a href="/home">Home &nbsp;/</a></li>
-                <li class="px-1">Contact Us</li>
-            </ul>
-        </div>
-        <div class="content py-5">
-            <h1>Contact Us</h1>
-        </div>
-    </div>
+<div *ngIf="loading" class="loader text-center py-5">
+  <p>Loading contact banner...</p>
+</div>
+
+<div *ngIf="error" class="alert alert-danger text-center">
+  {{ error }}
+</div>
+
+<div
+  class="main"
+  *ngIf="!loading && bannerData"
+  [style.background-image]="backgroundImage"
+>
+  <div class="overlay"></div>
+  <div class="breadcrumbs">
+    <ul>
+      <li class="px-1"><a routerLink="/home">Home &nbsp;/</a></li>
+      <li class="px-1">Contact Us</li>
+    </ul>
+  </div>
+  <div class="content py-5 text-center">
+    <h1>{{ bannerData.title || 'Contact Us' }}</h1>
+    <p *ngIf="bannerData.subtitle">{{ bannerData.subtitle }}</p>
+  </div>
 </div>

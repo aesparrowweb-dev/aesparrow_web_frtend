@@ -1,31 +1,25 @@
-<!-- Banner for /career -->
-<div class="main" *ngIf="currentRoute === '/blogs'">
-  <div class="row">
-    <div class="overlay"></div>
-    <div class="breadcrumbs">
-      <ul>
-        <li class="px-1"><a routerLink="/home">Home &nbsp;/</a></li>
-        <li class="px-1">Blogs</li>
-      </ul>
-    </div>
-    <div class="content py-5">
-      <h1>Blogs</h1>
-    </div>
-  </div>
+<div *ngIf="loading" class="loader text-center py-5">
+  <p>Loading banner...</p>
 </div>
 
-<!-- <div class="main" *ngIf="currentRoute === '/career/'">
-  <div class="row">
-    <div class="overlay"></div>
-    <div class="breadcrumbs">
-      <ul>
-        <li class="px-1"><a routerLink="/home">Home &nbsp;/</a></li>
-        <li class="px-1"><a routerLink="/career">Career &nbsp;/</a></li>
-        <li class="px-1">Job List</li>
-      </ul>
-    </div>
-    <div class="content py-5">
-      <h1>Career Openings</h1>
-    </div>
+<div *ngIf="error" class="alert alert-danger text-center">
+  {{ error }}
+</div>
+
+<div
+  class="main"
+  *ngIf="!loading && bannerData"
+  [style.background-image]="backgroundImage"
+>
+  <div class="overlay"></div>
+  <div class="breadcrumbs">
+    <ul>
+      <li class="px-1"><a routerLink="/home">Home &nbsp;/</a></li>
+      <li class="px-1">Blogs</li>
+    </ul>
   </div>
-</div> -->
+  <div class="content py-5 text-center">
+    <h1>{{ bannerData.title || 'Blogs' }}</h1>
+    <p *ngIf="bannerData.subtitle">{{ bannerData.subtitle }}</p>
+  </div>
+</div>

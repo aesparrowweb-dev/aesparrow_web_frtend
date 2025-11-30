@@ -1,48 +1,22 @@
-<!-- Banner for /career -->
-<div class="main" *ngIf="currentRoute === '/career'">
+<div class="main" *ngIf="bannerData">
   <div class="row">
     <div class="overlay"></div>
-    <div class="breadcrumbs">
-      <ul>
-        <li class="px-1"><a routerLink="/home">Home &nbsp;/</a></li>
-        <li class="px-1">Career</li>
-      </ul>
-    </div>
-    <div class="content py-5">
-      <h1>Career</h1>
-    </div>
-  </div>
-</div>
-
-<div class="main" *ngIf="currentRoute === '/career/job-list'">
-  <div class="row">
-    <div class="overlay"></div>
-    <div class="breadcrumbs">
-      <ul>
-        <li class="px-1"><a routerLink="/home">Home &nbsp;/</a></li>
-        <li class="px-1"><a routerLink="/career">Career &nbsp;/</a></li>
-        <li class="px-1">Job List</li>
-      </ul>
-    </div>
-    <div class="content py-5">
-      <h1>Career Openings</h1>
-    </div>
-  </div>
-</div>
-
-
-<div class="main" *ngIf="currentRoute === '/career/career-form'">
-  <div class="row">
-    <div class="overlay"></div>
-    <div class="breadcrumbs">
-      <ul>
-        <li class="px-1"><a routerLink="/home">Home &nbsp;/</a></li>
-        <li class="px-1"><a routerLink="/career">Career &nbsp;/</a></li>
-         <li class="px-1">Job Form</li>
-      </ul>
-    </div>
-    <div class="content py-5">
-      <h1>Apply Now</h1>
+    <div
+      class="banner"
+      [ngStyle]="{'background-image': 'url(' + bannerData.banner_image + ')'}"
+    >
+      <div class="breadcrumbs">
+        <ul>
+          <li class="px-1"><a routerLink="/home">Home &nbsp;/</a></li>
+          <li class="px-1">Career</li>
+          <li *ngIf="currentRoute.includes('job-list')" class="px-1">/ Job List</li>
+          <li *ngIf="currentRoute.includes('career-form')" class="px-1">/ Apply Now</li>
+        </ul>
+      </div>
+      <div class="content py-5 text-center text-white">
+        <h1>{{ bannerData.title || 'Career' }}</h1>
+        <p *ngIf="bannerData.subtitle">{{ bannerData.subtitle }}</p>
+      </div>
     </div>
   </div>
 </div>

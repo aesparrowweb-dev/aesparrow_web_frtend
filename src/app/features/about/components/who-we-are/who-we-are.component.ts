@@ -1,28 +1,49 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../../../environments/environments';
+
+export interface WhyChooseItem {
+  id: number;
+  title: string;
+  description: string;
+  icon_class: string;
+  display_order: number;
+  is_active: boolean;
+  created_at: string;
+  updated_at: string;
+}
 
 @Component({
   selector: 'app-who-we-are',
   templateUrl: './who-we-are.component.html',
   styleUrls: ['./who-we-are.component.scss']
 })
-export class WhoWeAreComponent {
-features = [
-  {
-    title: 'Tailored Cybersecurity Solutions',
-    description: 'Every engagement is built around your organization’s goals and risk profile.'
-  },
-  {
-    title: 'Proven Expertise',
-    description: 'Our team brings decades of hands-on experience and industry certifications.'
-  },
-  {
-    title: 'Client-Centric Approach',
-    description: 'We work as partners, not just providers — ensuring clear communication and proactive support.'
-  },
-  {
-    title: 'Global Standards & Recognition',
-    description: 'Our certifications and partnerships show our commitment to excellence.'
-  }
-];
+export class WhoWeAreComponent implements OnInit {
+  whyChooseItems: WhyChooseItem[] = [];
+  isLoading = true;
+  error: string | null = null;
 
+  constructor(private http: HttpClient) {}
+
+  ngOnInit(): void {
+    this.fetchWhyChooseItems();
+  }
+
+  private fetchWhyChooseItems(): void {
+    this.isLoading = true;
+    this.error = null;
+
+    this.http.get<WhyChooseItem[]>(`${environment.apiUrl}why-choose/active/`)
+      .subscribe({
+        next: (data) => {
+          this.whyChooseItems = data;
+          this.isLoading = false;
+        },
+        error: (err) => {
+          console.error('Error fetching Why Choose Us items:', err);
+          this.error = 'Failed to load Why Choose Us content. Please try again later.';
+          this.isLoading = false;
+        }
+      });
+  }
 }

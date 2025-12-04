@@ -27,6 +27,9 @@ h1 {
 
     img {
         height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        object-fit: cover;
     }
 }
 
@@ -73,16 +76,23 @@ p.title {
     right: -7% !important;
 }
 
+::ng-deep .slick-slide {
+    transition: all .3s ease-in-out;
+    transform: scaleY(.9);
+}
+
 ::ng-deep .slick-slide.slick-center {
     transform: scaleY(1) !important;
 }
 
-.slick-slide {
-    transition: all .3s ease-in-out;
+::ng-deep .slick-track {
+    display: flex !important;
+    align-items: center;
 }
 
-.slick-slide {
-    transform: scaleY(.9);
+::ng-deep .slick-slide > div {
+    display: flex;
+    justify-content: center;
 }
 
 .slick-prev2:before,

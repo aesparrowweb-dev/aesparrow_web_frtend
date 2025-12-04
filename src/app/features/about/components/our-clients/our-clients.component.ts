@@ -1,83 +1,74 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { SlickCarouselComponent } from 'ngx-slick-carousel';
-
-
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-our-clients',
   templateUrl: './our-clients.component.html',
   styleUrls: ['./our-clients.component.scss']
 })
-export class OurClientsComponent {
+export class OurClientsComponent implements OnInit {
   @ViewChild('slickModal') slickModal!: SlickCarouselComponent;
 
-  testimonialData = [
-    {
-      quote: "AESPARROW’s expertise in cybersecurity transformed our risk management strategy. They identified and helped us fix critical vulnerabilities before they could be exploited.",
-      name: "Julius Dias",
-      designation: "CTO",
-      company: "Squizify Pty Ltd",
-      img: "assets/images/about/user.png"
-    },
-    {
-      quote: "We’ve relied on AESPARROW for all our compliance needs, and their attention to detail and proactive approach are unmatched.",
-      name: "Client Name",
-      designation: "Compliance Officer",
-      company: "Company Name",
-      img: "assets/images/about/user.png"
-    },
-    {
-      quote: "Their red team simulation revealed gaps we didn’t know existed. AESPARROW doesn’t just test — they teach and strengthen.",
-      name: "CISO",
-      designation: "CISO",
-      company: "E-commerce Company",
-      img: "assets/images/about/user.png"
-    },
-    {
-      quote: "From audit readiness to hands-on training, AESPARROW has become a trusted extension of our security team.",
-      name: "VP",
-      designation: "VP, IT Operations",
-      company: "SaaS Firm",
-      img: "assets/images/about/user.png"
-    }
-  ];
+  testimonialData: any[] = [];
 
+  constructor(private apiService: ApiService) {}
 
-  slideconfig = {
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    infinite: true,
-    arrows: false,
-    dots: true,
-    centerMode: true,
-    centerPadding: '10px',
-    responsive: [
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-        }
+  ngOnInit(): void {
+    this.loadTestimonials();
+  }
+
+  loadTestimonials() {
+    this.apiService.getData('testimonials').subscribe(
+      (res) => {
+        this.testimonialData = res;
+        this.slideconfig = this.getSlideConfig();
+
+        // important: wait for DOM update then reinit slick
+        setTimeout(() => {
+          if (this.slickModal) {
+            this.slickModal.initSlick();
+          }
+        }, 100);
       },
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 2,
-          centerMode: false
-        }
+      (err) => {
+        console.error('Error fetching testimonials:', err);
       }
-    ]
+    );
+  }
+
+  slideconfig = this.getSlideConfig();
+
+  private getSlideConfig() {
+    const singleTestimonial = this.testimonialData.length <= 1;
+
+    return {
+      slidesToShow: singleTestimonial ? 1 : 3,
+      slidesToScroll: 1,
+      infinite: !singleTestimonial,
+      arrows: false,
+      dots: !singleTestimonial,
+      centerMode: true,
+      centerPadding: singleTestimonial ? '0px' : '10px',
+      adaptiveHeight: true,
+      responsive: [
+        {
+          breakpoint: 600,
+          settings: { slidesToShow: 1 }
+        },
+        {
+          breakpoint: 991,
+          settings: { slidesToShow: 2, centerMode: false }
+        }
+      ]
+    };
   }
 
   goToPrevSlide() {
-    if (this.slickModal) {
-      this.slickModal.slickPrev();
-    }
+    if (this.slickModal) this.slickModal.slickPrev();
   }
+
   goToNextSlide() {
-    if (this.slickModal) {
-      this.slickModal.slickNext();
-    }
+    if (this.slickModal) this.slickModal.slickNext();
   }
-
-
 }

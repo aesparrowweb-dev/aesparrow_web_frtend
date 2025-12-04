@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as AOS from 'aos';
+import { ApiService } from '../../../../services/api.service';
 
 
 @Component({
@@ -7,44 +8,30 @@ import * as AOS from 'aos';
   templateUrl: './industries-we-serve.component.html',
   styleUrls: ['./industries-we-serve.component.scss']
 })
-export class IndustriesWeServeComponent {
+export class IndustriesWeServeComponent implements OnInit {
+  industries: any[] = [];
+  isLoading = true;
+  hasError = false;
 
+  constructor(private apiService: ApiService) {}
 
-  industries = [
-    {
-      title: 'Banking & Finance',
-      description: 'Securing digital transactions and financial systems',
-      image: 'assets/images/about/banking.png'
-    },
-    {
-      title: 'Healthcare & Pharmaceuticals',
-      description: 'Protecting patient data and HIPAA compliance',
-      image: 'assets/images/about/healthcare.png'
-    },
-    {
-      title: 'eCommerce & Retail',
-      description: 'Defending online platforms, payment gateways, and customer data',
-      image: 'assets/images/about/ecommerce.png'
-    },
-    {
-      title: 'Government & Public Sector',
-      description: 'Safeguarding national infrastructure and data assets',
-      image: 'assets/images/about/goverment.jpg'
-    },
-    {
-      title: 'Technology & SaaS',
-      description: 'Fortifying cloud systems and API integrations',
-      image: 'assets/images/about/saas.png'
-    },
-    {
-      title: 'Education & eLearning',
-      description: 'Securing digital learning platforms and student data',
-      image: 'assets/images/about/education.png'
-    }
-  ];
+  ngOnInit() {
+    AOS.init();
+    this.loadIndustries();
+  }
 
-   ngOnInit() {
-     AOS.init();
-   }
+  private loadIndustries(): void {
+    this.apiService.getData('industries').subscribe({
+      next: (response) => {
+        // Handle both paginated and non-paginated responses
+        this.industries = Array.isArray(response) ? response : response?.results || [];
+        this.isLoading = false;
+      },
+      error: () => {
+        this.hasError = true;
+        this.isLoading = false;
+      }
+    });
+  }
 }
 

@@ -1,35 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService } from '../../../../services/api.service';
 
 @Component({
   selector: 'app-life-of-aesparrow',
   templateUrl: './life-of-aesparrow.component.html',
   styleUrls: ['./life-of-aesparrow.component.scss']
 })
-export class LifeOfAesparrowComponent {
-  lifeAtAESPARROW = {
-    culture: 'At AESPARROW, we thrive in a culture of innovation, collaboration, and continuous growth. We believe in empowering our teams with trust, flexibility, and purpose.',
-    values: [
-      'Integrity in everything we do',
-      'Cybersecurity-first mindset',
-      'Customer-centric innovation',
-      'Encouraging personal and professional growth',
-      'Teamwork and knowledge sharing'
-    ],
-    benefits: [
-      'Flexible work hours & hybrid model',
-      'Weekly tech learning sessions',
-      'Employee recognition programs',
-      'Mental wellness support',
-      'Hackathons and team retreats'
-    ],
-    callToAction: 'Ready to grow your career with us? Explore our open roles and become part of the AESPARROW family.'
-  };
+export class LifeOfAesparrowComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  lifeAtAESPARROW: any = null;
 
+  constructor(
+    private router: Router,
+    private apiService: ApiService
+  ) {}
+
+  ngOnInit() {
+    this.apiService.getData("life").subscribe({
+      next: (data) => {
+        this.lifeAtAESPARROW = {
+          ...data,
+          callToAction: data.call_to_action   // rename snake_case → camelCase
+        };
+      },
+      error: (err) => {
+        console.error("Failed to load Life at AESPARROW data", err);
+      }
+    });
+  }
 
   onClick() {
-    this.router.navigate(['/career/job-list'])
+    this.router.navigate(['/career/job-list']);
   }
 }

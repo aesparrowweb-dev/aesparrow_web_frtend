@@ -1,8 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { SlickCarouselComponent } from 'ngx-slick-carousel';
-
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { ApiService } from '../../../../services/api.service';
 
 
 @Component({
@@ -14,13 +13,18 @@ export class BlogsComponent {
   @ViewChild('slickModal') slickModal!: SlickCarouselComponent;
   data:any;
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private apiService: ApiService, private router: Router) { }
 
 
 
   ngOnInit() {
-    this.http.get("assets/data/blogsData.json").subscribe((response) => {
-      this.data = response;
+    this.apiService.getData('blogs').subscribe({
+      next: (response) => {
+        this.data = response;
+      },
+      error: (err) => {
+        console.error('Error fetching blogs for home page:', err);
+      }
     });
   }
 

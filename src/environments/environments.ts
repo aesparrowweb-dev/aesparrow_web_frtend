@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://127.0.0.1:8000/api/'  // Django local server
+  apiUrl: 'https://aesparrow-web-bknd.onrender.com/api/'   // Django local server
 };

@@ -3,31 +3,22 @@
         <div class="row align-items-center">
             <div class="col-md-4 text-center mb-md-0 order-2 order-md-1" data-aos="fade-right"
                 data-aos-duration="1500">
-                <img src="assets/images/home/about img.png" alt="About Us" class="img-fluid rounded">
+                <img *ngIf="aboutData?.image; else fallbackImg" [src]="aboutData.image" alt="About Us"
+                    class="img-fluid rounded">
+                <ng-template #fallbackImg>
+                    <img src="assets/images/home/about img.png" alt="About Us" class="img-fluid rounded">
+                </ng-template>
             </div>
             <div class="col-md-8 text-center order-1 order-md-2 desc">
-                <h2 *ngIf="showHeading" class="heading-underline">About Us</h2>
+                <h2 *ngIf="showHeading" class="heading-underline">{{ aboutData?.heading || 'About Us' }}</h2>
                 <div class="scroll-box mx-auto" data-aos="fade-up" data-aos-duration="1500">
                     <div class="scroll-text">
-                        <p>
-                            At <strong>AESPARROW CONSULTING PVT LTD.</strong> is a forward-thinking cybersecurity firm
-                            dedicated to helping organizations stay secure in an increasingly digital and threat-prone
-                            world. Founded by industry veterans, we specialize in crafting tailored cybersecurity
-                            strategies that are proactive, scalable, and compliance ready.
+                        <p *ngFor="let paragraph of aboutData?.description; let i = index" [attr.data-index]="i">
+                            {{ paragraph }}
                         </p>
-                        <p>
-                            We protect your digital assets with the highest standards of security practices, ensuring
-                            resilience against evolving cyber threats. From startups to large enterprises, our mission
-                            is to empower businesses with the confidence to innovate securely.
-                        </p>
-                        <p>
-                            We pride ourselves on our consultative approach, combining deep technical knowledge with an
-                            understanding of your business context to deliver effective, long-term security solutions.
-                        </p>
-
                     </div>
                 </div>
-                <button class="btn buttonsd mt-3">Read More</button>
+                <button class="btn buttonsd mt-3" routerLink="/about">Read More</button>
             </div>
         </div>
     </div>

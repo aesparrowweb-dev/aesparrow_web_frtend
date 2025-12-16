@@ -1,19 +1,21 @@
 <div class="main-container  text-center">
   <div class="py-5">
-    <h2 data-aos="fade-down" data-aos-duration="1500" data-aos-easing="ease-in-sine">Trusted Over <span
-        class="numbers">100+</span> Companies in the World</h2>
+    <h2 data-aos="fade-down" data-aos-duration="1500" data-aos-easing="ease-in-sine">Trusted Over <span class="numbers">100+</span> Companies in the World</h2>
     <div class="container" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-sine">
-      <div class="row justify-content-center mt-4 py-5 scroll-container">
+      <div class="text-white" *ngIf="errorMessage">{{ errorMessage }}</div>
+      <div class="text-white" *ngIf="isLoading">Loading trusted partners...</div>
+      <div class="row justify-content-center mt-4 py-5 scroll-container" *ngIf="!isLoading && logos.length">
         <div class="image-wrapper">
-          <ng-container *ngFor="let image of client1Data">
-            <img [src]="image.img" alt="Client image" class="img-fluid silver-logo">
-          </ng-container>
-          <ng-container *ngFor="let image of client1Data">
-            <img [src]=" image.img" alt="Client image" class="img-fluid silver-logo">
+          <ng-container *ngFor="let logo of logos">
+            <a *ngIf="logo.website_url; else logoImage" [href]="logo.website_url" target="_blank" rel="noopener noreferrer">
+              <img [src]="logo.logo_url" [alt]="logo.name" class="img-fluid silver-logo">
+            </a>
+            <ng-template #logoImage>
+              <img [src]="logo.logo_url" [alt]="logo.name" class="img-fluid silver-logo">
+            </ng-template>
           </ng-container>
         </div>
       </div>
     </div>
   </div>
-
 </div>

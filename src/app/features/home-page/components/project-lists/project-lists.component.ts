@@ -1,4 +1,5 @@
 import { Component, ViewChild, ElementRef, Renderer2, Input, ChangeDetectorRef } from '@angular/core';
+import { ApiService } from '../../../../services/api.service';
 
 @Component({
   selector: 'app-project-lists',
@@ -10,12 +11,22 @@ export class ProjectListsComponent {
  hasAnimated = false;
  animatedNumbers: { [key: number]: number } = {};
 
-statData = [
-  { id: 1, numbers: 150, suffix: '+', label: 'Global Clients', icon: 'bi bi-globe' },
-  { id: 2, numbers: 50, suffix: '+', label: 'Team Members', icon: 'bi bi-people' },
-  { id: 3, numbers: 200, suffix: '+', label: 'Projects Delivered', icon: 'bi bi-laptop' },
-  { id: 4, numbers: 10, suffix: '', label: 'Awards Won', icon: 'bi bi-award' }
-];
+statData: any[] = [];
+
+
+  constructor(private apiService: ApiService) {}
+
+
+  ngOnInit() {
+    this.apiService.getData('project-lists').subscribe({
+      next: (response) => {
+        this.statData = response;
+      },
+      error: (err) => {
+        console.error('Error fetching project lists for home page:', err);
+      }
+    });
+  }
 
 
 

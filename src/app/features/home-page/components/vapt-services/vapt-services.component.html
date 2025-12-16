@@ -8,10 +8,14 @@
                     <span>&#8249;</span>
                 </button>
                 
+                <div *ngIf="isLoading" class="loading text-center py-4">
+                    Loading VAPT services...
+                </div>
+
                 <ngx-slick-carousel class="carousel" 
                     #slickModal="slick-carousel"
-                    [config]="slideConfig">
-                    <div class="item" ngxSlickItem *ngFor="let service of services; let i = index" [style.background-image]="'url(assets/images/home/' + service.image + ')'">
+                    [config]="slideConfig" *ngIf="!isLoading && services.length">
+                    <div class="item" ngxSlickItem *ngFor="let service of services; let i = index" [style.background-image]="getBackgroundImage(service)">
                         <div class="overlay"></div>
                         <div class="text">
                             <h4>{{ service.title }}</h4>
@@ -19,6 +23,10 @@
                         </div>
                     </div>
                 </ngx-slick-carousel>
+
+                <div *ngIf="!isLoading && !services.length" class="empty text-center py-4">
+                    No VAPT services available at the moment.
+                </div>
                 
                 <button class="touch-scroll-btn right-scroll" (click)="nextSlide()" aria-label="Next">
                     <span>&#8250;</span>

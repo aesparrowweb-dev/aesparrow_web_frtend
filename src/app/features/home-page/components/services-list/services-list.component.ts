@@ -12,6 +12,8 @@ export class ServicesListComponent implements OnInit {
   isLoading = false;
   errorMessage: string | null = null;
 
+   apiUrl = environment.apiUrl;
+
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
@@ -40,6 +42,6 @@ interface HomeServiceCard {
   id: number;
   title: string;
   description: string;
-  image_url: string;
-  glitch_image_url?: string | null;
+  image: string;                 // ✅ MATCH Django
+  glitch_image?: string | null;  // ✅ MATCH Django
 }

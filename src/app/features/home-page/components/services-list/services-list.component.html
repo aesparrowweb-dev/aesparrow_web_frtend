@@ -16,8 +16,19 @@
         <div class="box">
           <div class="image-wrapper">
             <div class="glitch-img">
-              <img [src]="data.image_url" [alt]="data.title" class="original-img" />
-              <img [src]="data.glitch_image_url || data.image_url" [alt]="data.title + ' glitch'" class="glitch-img-hover" />
+             <img
+                [src]="data.image"
+                [alt]="data.title"
+                class="original-img"
+              />
+
+              <img
+                *ngIf="data.glitch_image"
+                [src]="data.glitch_image"
+                [alt]="data.title + ' glitch'"
+                class="glitch-img-hover"
+              />
+
             </div>
             <div class="overlay">
               <h4 class="card-title">{{ data.title }}</h4>

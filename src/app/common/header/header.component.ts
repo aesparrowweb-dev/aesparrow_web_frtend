@@ -53,10 +53,12 @@ export class HeaderComponent {
   }
 
   loadAllService() {
-    this.http.get('assets/data/serviceData.json').subscribe(response => {
-      this.serviceData = response;
+  this.http.get<any[]>('http://localhost:8000/api/services/menu/')
+    .subscribe(data => {
+      this.serviceData = data;
     });
-  }
+}
+
 
   loadAllSerachData(): void {
     if (this.searchDataLoaded) return;
@@ -66,16 +68,14 @@ export class HeaderComponent {
     });
   }
 
-  onClickService(serviceId: any) {
-    this.mainServiceId = serviceId;
-    this.router.navigate(['service', this.mainServiceId]);
-    window.scrollTo(0, 0);
-  }
+ onClickService(service: any) {
+  this.router.navigate(['/service', service.slug]);
+  window.scrollTo(0, 0);
+}
 
-  onClickSubService(subServiceId: any) {
-    this.router.navigate(['./service', this.mainServiceId, subServiceId]);
-    window.scrollTo(0, 0);
-  }
+onClickSubService(service: any, sub: any) {
+  this.router.navigate(['/service', service.slug, sub.slug]);
+}
 
   openSubnav() {
     this.isSubnavOpen = true;

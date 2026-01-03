@@ -18,18 +18,20 @@
                     <li class="dropdown-submenu" *ngFor="let service of serviceData; let j = index"
                         (mouseenter)="mainServiceId = service.id" [style.--j]="j + 1">
 
-                        <a (click)="onClickService(service.id)"
+                        <a (click)="onClickService(service)"
                             class="dropdown-item d-flex justify-content-between align-items-center">
                             {{ service.header_title }}
                             <i class="bi bi-chevron-right"></i>
                         </a>
 
                         <ul class="dropdown-menu sub-right animated-dropdown" *ngIf="service.children?.length">
-                            <li *ngFor="let child of service.children; let i = index" [style.--i]="i + 1">
-                                <a class="dropdown-item" (click)="onClickSubService(child.id)">
+                            <li *ngFor="let child of service.children">
+                                <a class="dropdown-item" (click)="onClickSubService(service, child)">
                                     {{ child.sub_title }}
                                 </a>
                             </li>
+
+
                         </ul>
                     </li>
 

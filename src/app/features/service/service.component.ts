@@ -21,12 +21,17 @@ export class ServiceComponent {
     })
   }
 
-  loadAllService(serviceId:any) {
-    this.http.get('assets/data/serviceData.json').subscribe(response => {
-      this.serviceData = response;
-      this.filterdService = this.serviceData.find((x:any) => x.id === serviceId);
+ loadAllService(serviceId: any) {
+  this.http
+    .get<any[]>('http://localhost:8000/api/services/menu/')
+    .subscribe((data) => {
+      this.serviceData = data;
 
-    })
-  }
+      this.filterdService = this.serviceData.find(
+        (x: any) => x.slug === serviceId || x.id === serviceId
+      );
+    });
+}
+
 
 }

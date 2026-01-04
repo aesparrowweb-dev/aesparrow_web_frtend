@@ -4,6 +4,7 @@ import { SidenavService } from 'src/app/services/sidenav.service';
 import * as AOS from 'aos';
 import { ResponsiveService } from 'src/app/services/responsive.service';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environments';
 
 @Component({
   selector: 'app-header',
@@ -52,12 +53,13 @@ export class HeaderComponent {
     }
   }
 
-  loadAllService() {
-  this.http.get<any[]>('http://localhost:8000/api/services/menu/')
-    .subscribe(data => {
-      this.serviceData = data;
-    });
-}
+ loadAllService() {
+    this.http
+      .get<any[]>(`${environment.apiUrl}services/menu/`)
+      .subscribe(data => {
+        this.serviceData = data;
+      });
+  }
 
 
   loadAllSerachData(): void {

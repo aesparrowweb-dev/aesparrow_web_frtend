@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
+import { environment } from 'src/environments/environments';
 
 @Component({
   selector: 'app-service',
@@ -21,17 +22,13 @@ export class ServiceComponent {
     })
   }
 
- loadAllService(serviceId: any) {
-  this.http
-    .get<any[]>('http://localhost:8000/api/services/menu/')
-    .subscribe((data) => {
-      this.serviceData = data;
-
-      this.filterdService = this.serviceData.find(
-        (x: any) => x.slug === serviceId || x.id === serviceId
-      );
-    });
-}
+  loadAllService(serviceSlug: string) {
+    this.http
+      .get<any>(`${environment.apiUrl}service/${serviceSlug}/`)
+      .subscribe(data => {
+        this.filterdService = data;
+      });
+  }
 
 
 }

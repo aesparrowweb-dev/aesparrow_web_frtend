@@ -7,11 +7,11 @@
       <div class="row justify-content-center mt-4 py-5 scroll-container" *ngIf="!isLoading && logos.length">
         <div class="image-wrapper">
           <ng-container *ngFor="let logo of logos">
-            <a *ngIf="logo.website_url; else logoImage" [href]="logo.website_url" target="_blank" rel="noopener noreferrer">
-              <img [src]="logo.logo_url" [alt]="logo.name" class="img-fluid silver-logo">
+            <a *ngIf="logo.website_url; else logoImage" [href]="logo.website_url" target="_blank">
+              <img [src]="logo.logo" [alt]="logo.name" class="img-fluid silver-logo">
             </a>
             <ng-template #logoImage>
-              <img [src]="logo.logo_url" [alt]="logo.name" class="img-fluid silver-logo">
+              <img [src]="logo.logo" [alt]="logo.name" class="img-fluid silver-logo">
             </ng-template>
           </ng-container>
         </div>

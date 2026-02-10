@@ -41,6 +41,6 @@ export class TrustedComponent implements OnInit {
 interface TrustedCompanyLogo {
   id: number;
   name: string;
-  logo_url: string;
+  logo: string;
   website_url?: string | null;
 }

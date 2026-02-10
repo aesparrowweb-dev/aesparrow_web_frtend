@@ -9,7 +9,8 @@
                     <div ngxSlickItem class="cards" *ngFor="let item of data">
                         <div class="border-span">
                             <div class="blog-img">
-                                <img class="mainimg" [src]="item.img" alt="blog-img">
+                                <img class="mainimg" [src]="getImageUrl(item.img)">
+
                             </div>
                             <div class=" p-3">
                                 <h5 class="mb-3">{{item.title}}</h5>

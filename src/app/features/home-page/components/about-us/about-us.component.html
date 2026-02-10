@@ -13,10 +13,27 @@
                 <h2 *ngIf="showHeading" class="heading-underline">{{ aboutData?.heading || 'About Us' }}</h2>
                 <div class="scroll-box mx-auto" data-aos="fade-up" data-aos-duration="1500">
                     <div class="scroll-text">
-                        <p *ngFor="let paragraph of aboutData?.description; let i = index" [attr.data-index]="i">
-                            {{ paragraph }}
-                        </p>
-                    </div>
+                    
+                    <div class="scroll-text">
+
+  <!-- First paragraph with locked company name -->
+  <p class="about-text" *ngIf="aboutData?.description?.length">
+    <span class="company-name">
+      AESPARROW CONSULTING PVT LTD
+    </span>
+    {{ aboutData.description[0] }}
+  </p>
+
+  <!-- Remaining paragraphs -->
+  <p *ngFor="let paragraph of aboutData?.description.slice(1)">
+    {{ paragraph }}
+  </p>
+
+</div>
+
+
+                </div>
+
                 </div>
                 <button class="btn buttonsd mt-3" routerLink="/about">Read More</button>
             </div>

@@ -2,6 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { SlickCarouselComponent } from 'ngx-slick-carousel';
 import { Router } from '@angular/router';
 import { ApiService } from '../../../../services/api.service';
+import { environment } from '../../../../../environments/environments';
+
 
 
 @Component({
@@ -15,7 +17,7 @@ export class BlogsComponent {
 
   constructor(private apiService: ApiService, private router: Router) { }
 
-
+  environment = environment;
 
   ngOnInit() {
     this.apiService.getData('blogs').subscribe({
@@ -51,6 +53,23 @@ export class BlogsComponent {
       }
     ]
   }
+  getImageUrl(path: string) {
+  if (!path) return '';
+
+  // Already absolute (https://...)
+  if (path.startsWith('http')) {
+    return path;
+  }
+
+  // Django media path
+  if (path.startsWith('/media')) {
+    return 'http://127.0.0.1:8000' + path;
+  }
+
+  // Angular assets
+  return path;
+}
+
   goToPrevSlide() {
     if (this.slickModal) {
       this.slickModal.slickPrev();
